@@ -54,6 +54,10 @@ Javascript Load page, hide plash page, show results. event listeners. etc.
 
 API-integration. set up ajax query. work on manipulating the results data.
 
+### Screenshots
+
+![Screenshot of  Mobile Wireframe Rough Draft](project1/Assets/Screenshots/Restaurant_Recipe_App_Wireframe.JPG?raw=true "Mobile WireFrame Rough Draft")
+
 
 
 
