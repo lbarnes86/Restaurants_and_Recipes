@@ -56,8 +56,6 @@ API-integration. set up ajax query. work on manipulating the results data.
 
 ### Screenshots
 
-![Screenshot of  Mobile Wireframe Rough Draft](project1/Assets/Screenshots/Restaurant_Recipe_App_Wireframe.JPG?raw=true "Mobile WireFrame Rough Draft")
-
-
+![Screenshot of  Mobile Wireframe Rough Draft](Assets/Screenshots/Restaurant_Recipe_App_Wireframe_smaller.jpeg?raw=true "Mobile WireFrame Rough Draft")
 
 
