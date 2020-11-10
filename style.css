@@ -1,0 +1,33 @@
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+
+
+
+
+
+
+.cardResult{
+  background-color: crimson;
+  border-radius: 10%;
+  max-width: 50vw;
+  border: solid gold 2px;
+  overflow: hidden;
+}
+.result{
+  background-color: crimson;
+  padding: 10px;
+
+}
+.absol {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+
