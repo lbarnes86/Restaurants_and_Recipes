@@ -2,7 +2,7 @@ var restaurants = [];
 
 $.ajax({
     method: "GET",
-    url: "https://developers.zomato.com/api/v2.1/search?q=" + "Mexican" + "&count=" + "3" + "&lat=" + "32.958345" + "&lon=" + "-96.738986" + "&sort=" + "rating",
+    url: "https://developers.zomato.com/api/v2.1/search?q=" + "Italian" + "&count=" + "3" + "&lat=" + "32.958345" + "&lon=" + "-96.738986" + "&sort=" + "rating",
     headers: {
         "user-key": "2af77d90c4f9ac3a6faf1019f8a457e6"
     },
