@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+  width: 100vw;
+  background-color: #444444;
+  color: cornflowerblue;
+}
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+.centerTxt{
+  text-align: center;
+}
+.cardResult{
+  max-width: 50vw;
+  border: solid gold 2px;
+  overflow: hidden;
+  margin: 10px;
+}
+.cardResult2{
+  margin: 0;
+}
+.result{
+  
+  padding: 10px;
+
+}
+.absol {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+footer{
+  margin-top: 5vh;
+  height: 2vh;
+  width: 100vw;
+  background-color: #555555;
+}
+button{
+  text-align: center;
+}
+.recipeRow{
+  margin-top: 10vh;
+}
+.recipeD{
+  margin: 1vh;
+  min-width: 250px;
+}
