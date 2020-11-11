@@ -6,7 +6,10 @@
 
 
 function Spam(){
-    $("#recipeButton").attr('src', './spam.jpg');
+    $("#recipeImg").attr("src", "./spam.jpg");
+    $('#recipeTitle').text("Spam")
+    $('#recipeContent').text("Spam at home!")
+
 }
 
 

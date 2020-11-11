@@ -19,6 +19,9 @@ body{
   overflow: hidden;
   margin: 10px;
 }
+.cardResult2{
+  margin: 0;
+}
 .result{
   
   padding: 10px;
