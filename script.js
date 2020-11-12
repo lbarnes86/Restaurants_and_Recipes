@@ -4,54 +4,61 @@ let recipePlacehold = "Assets/Images/recipe_Placeholder.jpeg";
 var restaurants = [];
 var recipes = [];
 
-$.ajax({
-    method: "GET",
-    url: "https://developers.zomato.com/api/v2.1/search?q=" + "Italian" + "&count=" + "3" + "&lat=" + "32.958345" + "&lon=" + "-96.738986" + "&sort=" + "rating",
-    headers: {
-        "user-key": "2af77d90c4f9ac3a6faf1019f8a457e6"
-    },
+$("#homeSearch").on("click", function(event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    $(".homePage").css("display", "none");
+    $("#resultPage").css("display", "block");
 
-}).then(function(data) {
-    console.log(data);
-    // console.log(data.restaurants)
+    $.ajax({
+        method: "GET",
+        url: "https://developers.zomato.com/api/v2.1/search?q=" + "Italian" + "&count=" + "3" + "&lat=" + "32.958345" + "&lon=" + "-96.738986" + "&sort=" + "rating",
+        headers: {
+            "user-key": "2af77d90c4f9ac3a6faf1019f8a457e6"
+        },
 
-    restaurants = data.restaurants;
-    // restaurants += JSON.parse(data).restaurants;
-    // console.log(restaurants)
+    }).then(function(data) {
+        console.log(data);
+        console.log(data.restaurants)
+        
+        restaurants = data.restaurants;
+        // restaurants += JSON.parse(data).restaurants;
+        // console.log(restaurants)
+        
+        
+        for (var i = 0; i < restaurants.length; i++) {
+            const newRest = restaurants[i].restaurant;
+            
+            let newRestName = newRest.name;
+            let newRestImg = newRest.thumb;
+            let newRestAddress = newRest.location.address;
+            let newRestPhone = newRest.phone_numbers;
+            let newRestRating = newRest.user_rating.aggregate_rating + " Stars";
+            let newRestUrl = newRest.url;
+            
+            let divId = "#rest";
+            let restDiv = document.querySelector(divId += i);
+            
+            let restName = restDiv.querySelector(".restName");
+            restName.textContent = newRestName;
+            
+            let restImg = restDiv.querySelector(".restImg");
+            restImg.src = newRestImg;
+            if (newRestImg === "") {
+                restImg.src = restPlacehold;
+            }
 
-
-    for (var i = 0; i < restaurants.length; i++) {
-        const newRest = restaurants[i].restaurant;
-
-        let newRestName = newRest.name;
-        let newRestImg = newRest.thumb;
-        let newRestAddress = newRest.location.address;
-        let newRestPhone = newRest.phone_numbers;
-        let newRestRating = newRest.user_rating.aggregate_rating + " Stars";
-        let newRestUrl = newRest.url;
-
-        let divId = "#rest";
-        let restDiv = document.querySelector(divId += i);
-
-        let restName = restDiv.querySelector(".restName");
-        restName.textContent = newRestName;
-
-        let restImg = restDiv.querySelector(".restImg");
-        restImg.src = newRestImg;
-        if (newRestImg === "") {
-            restImg.src = restPlacehold;
+            let restAddress = restDiv.querySelector(".restAddress");
+            restAddress.textContent = newRestAddress;
+            
+            let restPhone = restDiv.querySelector(".restPhone");
+            restPhone.textContent = newRestPhone;
+            
+            //let restRating = restDiv.querySelector(".restRating");
+            //restRating.textContent = newRestRating;
+            
         }
-
-        let restAddress = restDiv.querySelector(".restAddress");
-        restAddress.textContent = newRestAddress;
-
-        let restPhone = restDiv.querySelector(".restPhone");
-        restPhone.textContent = newRestPhone;
-
-        let restRating = restDiv.querySelector(".restRating");
-        restRating.textContent = newRestRating;
-
-    }
+    });
 });
 
 
@@ -102,6 +109,19 @@ $.ajax({
 
 
 });
+    
+//    // "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
+//let edamamId = "c6579a60";
+//let edamamKey = "1c0e533d12ab90b9d4c8070b4ebfc462";
+//
+//$.ajax({
+//    method: "GET",
+//    url: "https://api.edamam.com/search?q=" + "mexican" + "&mealType=" + "Dinner" + "&dishType=" + "main-course" + "&app_id=" + edamamId + "&app_key=" + edamamKey + "&from=0&to=3"
+//    
+//}).then(function(data2) {
+//    console.log(data2);
+//
+//});
 
 
 
@@ -356,4 +376,15 @@ function putMyRecipesOnThePage() {
 
 
 
-//$("#homeSearch").on("click", function)
+
+
+
+
+
+
+
+
+
+
+
+

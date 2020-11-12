@@ -16,7 +16,7 @@
         <div class="row titlebar justify-content-within">
 
             <a class="col-3 nav-link sideNav" href="#" style="border-radius: 0 0 0 50%;">Link</a>
-            <a class="col-6 nav-link active mainNav" href="#">5-star Homebrew</a>
+            <a id="navTitle" class="col-6 nav-link active mainNav" href="#">5-star Homebrew</a>
             <a class="col-3 nav-link sideNav" href="#" style="border-radius: 0 0 50% 0;">Link</a>
         </div>
 
@@ -25,7 +25,7 @@
         <!--The jumbotron and home page of the app-->
         <div class="jumbotron jumbotron-fluid mx-auto" style="background-color: gold; border: crimson 3px solid;">
             <div class="container ">
-                <h1 class="display-4 ">5-Star Homebrew</h1>
+                <h1 class="display-4 ">Restaurants & Recipes</h1>
                 <p class="lead">An app for searching restaurants and recipes to cook at home</p>
                 <hr/>
                 <div class="d-flex justify-content-center justify-content-around">
@@ -37,23 +37,23 @@
         </div>
     </header>
 
-    <main id="resultPage" class="container resultCont" style="background-color: #555555;">
+    <main id="resultPage" class="container resultCont" style="background-color: #555555; display: none;">
 
         <div class="resultHeader" style="margin-top: 10vh;">Search results</div>
 
-        <article class="col-11  "> 
+        <article id="rest0" class="col-11  "> 
             <div class="row noPad">
                 <!--Img column-->
                 <div class="col-lg-3 "> 
-                    <img id="restImgT" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid noPad">
+                    <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid restImg">
                 </div>
                 <!--Info column-->
                 <div class="col-lg-9 "> 
-                    <h4 id="restName" class="centerTxt restName">Rey's ToMacco Stand</h4>
+                    <h4 class="centerTxt restName">Rey's ToMacco Stand</h4>
                     <div class="row justify-content-around ">
-                        <h5 id="restAddressT">547 nw 12th street</h5>
+                        <h5 class="restAddress">547 nw 12th street</h5>
                         <h5 id="restHoursT">Mon-Wed 11am-2pm</h5>
-                        <h5 id="restRatingT">Rated: 5 out of 5</h5>
+                        <h5 id="restRating">Rated: 5 out of 5</h5>
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
@@ -63,13 +63,99 @@
                         </p>
                     </div>
                     <div class="row">
-                        <button class="col-lg-6 " style="background-color: snow;">call <span id="restPhoneT">(222-464-8874)</span></button>
+                        <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
                         <button class="col-lg-6 " style="background-color: red;">directions</button>
                     </div>
                 </div>
             </div>
         </article>
 
+        <article id="rest1" class="col-11  "> 
+            <div class="row noPad">
+                <!--Img column-->
+                <div class="col-lg-3 "> 
+                    <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid restImg">
+                </div>
+                <!--Info column-->
+                <div class="col-lg-9 "> 
+                    <h4 class="centerTxt restName">Rey's ToMacco Stand</h4>
+                    <div class="row justify-content-around ">
+                        <h5 class="restAddress">547 nw 12th street</h5>
+                        <h5 id="restHoursT">Mon-Wed 11am-2pm</h5>
+                        <h5 id="restRating">Rated: 5 out of 5</h5>
+                    </div>
+                    <hr/>
+                    <div id="restDescT" class="row">
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
+                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
+                        <button class="col-lg-6 " style="background-color: red;">directions</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        <article class="col-11"> 
+            <div class="row noPad">
+                <!--Img column-->
+                <div class="col-lg-3 "> 
+                    <img src="./maruchan.jpg" alt="dsjdhskd" class="img-fluid">
+                </div>
+                <!--Info column-->
+                <div class="col-lg-9 "> 
+                    <h4 class="centerTxt ">Rey's Taco Stand</h4>
+                    <div class="row justify-content-around ">
+                        <h5>548 nw 12th street</h5>
+                        <h5>Phone: 222-464-8445</h5>
+                        <h5>Rated: 4 out of 5</h5>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
+                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <button class="col-lg-6" style="background-color: snow;">call (215-356-4555)</button>
+                        <button class="col-lg-6" style="background-color: red;">directions</button>
+                    </div>
+                </div>
+            </div>
+        </article>
         <article class="col-11"> 
             <div class="row noPad">
                 <!--Img column-->
@@ -157,10 +243,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    
-    
-    
     <script src="script.js"></script>
 
     
