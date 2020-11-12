@@ -54,21 +54,130 @@ $.ajax({
     }
 });
 
-// "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
-let edamamId = "c6579a60";
-let edamamKey = "1c0e533d12ab90b9d4c8070b4ebfc462";
+
+recipeQuery2 = "https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Seafood";
+recipeApiKey = "9973533";
+foodTypeSearch = "Mexican";
+
+let mealIds = [];
+let recipeArray = [];
 
 $.ajax({
     method: "GET",
-    url: "https://api.edamam.com/search?q=" + "mexican" + "&mealType=" + "Dinner" + "&dishType=" + "main-course" + "&app_id=" + edamamId + "&app_key=" + edamamKey + "&from=0&to=3"
+    url: "https://www.themealdb.com/api/json/v2/9973533/filter.php?a=" + foodTypeSearch,
 
 }).then(function(data2) {
     console.log(data2);
+    console.log(data2.meals)
+
+    let mealsArray = data2.meals;
+
+    for (let i = 0; i < mealsArray.length; i++) {
+        const meal = mealsArray[i];
+        let newMealId = meal.idMeal;
+        mealIds.push(newMealId);
+    }
+
+    console.log(mealIds);
+    let recipeReturns = 0;
+    for (let j = 0; j < mealIds.length; j++) {
+        const recipeId = mealIds[j];
+
+        recipeApiKey = "9973533";
+        $.ajax({
+            method: "GET",
+            url: "https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=" + recipeId,
+
+        }).then(function(data3) {
+            console.log(data3);
+            recipeArray.push(data3);
+            recipeReturns++;
+
+            if (recipeReturns == mealIds.length) {
+                putMyRecipesOnThePage();
+            }
+        });
+
+    };
+
 
 });
 
-// "&mealType=" + "Dinner" + "&dishType=" + "main-course" +
 
+
+function putMyRecipesOnThePage() {
+    console.log(recipeArray);
+
+    for (var r = 0; r < 3; r++) {
+        const recipe1 = recipeArray[r];
+        newRecipe = recipe1.meals[0];
+
+        let newRecipeName = newRecipe.strMeal;
+        let newRecipeImg = newRecipe.strMealThumb;
+        let newRecipeCategory = newRecipe.strCategory;
+        let newRecipeLink = newRecipe.strSource;
+        let newRecipeVideo = newRecipe.strYoutube;
+
+        let divId = "#recipe";
+        let recipeDiv = document.querySelector(divId += r);
+
+        let recipeName = recipeDiv.querySelector(".recipeName");
+        recipeName.textContent = newRecipeName;
+
+        let recipeImg = recipeDiv.querySelector(".recipeImg");
+        recipeImg.src = newRecipeImg;
+        if (newRecipeImg === "") {
+            recipeImg.src = recipePlacehold;
+        }
+
+        let recipeCategory = recipeDiv.querySelector(".recipeCategory");
+        recipeCategory.textContent = newRecipeCategory;
+
+        let recipeLink = recipeDiv.querySelector(".recipeLink");
+        recipeLink.href = newRecipeLink;
+
+
+        let recipeVideo = recipeDiv.querySelector(".recipeVideo");
+        recipeVideo.href = newRecipeVideo;
+    };
+};
+
+
+
+
+
+
+// restaurants += JSON.parse(data).restaurants;
+
+
+
+
+// Search meal by name
+// "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"
+// List all meals by first letter
+// "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
+// Lookup full meal details by id
+// "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772"
+// Lookup a single random meal
+// "https://www.themealdb.com/api/json/v1/1/random.php"
+// Lookup a selection of 10 random meals (only available to $2+ Patreon supporters)
+// "https://www.themealdb.com/api/json/v1/1/randomselection.php"
+// List all meal categories
+// "https://www.themealdb.com/api/json/v1/1/categories.php"
+// Latest Meals (only available to $2+ Patreon supporters)
+// "https://www.themealdb.com/api/json/v1/1/latest.php"
+// List all Categories, Area, Ingredients
+// "https://www.themealdb.com/api/json/v1/1/list.php?c=list"
+// "https://www.themealdb.com/api/json/v1/1/list.php?a=list"
+// "https://www.themealdb.com/api/json/v1/1/list.php?i=list"
+// Filter by main ingredient
+// "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast"
+// Filter by multi-ingredient (only available to $2+ Patreon supporters)
+// "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast,garlic,salt"
+// Filter by Category
+// "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood"
+// Filter by Area
+// "https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian"
 
 
 
@@ -98,44 +207,6 @@ $.ajax({
 //     console.log(response);
 // });
 
-// console.log(data.restaurants)
-
-// restaurants = data.restaurants;
-// restaurants += JSON.parse(data).restaurants;
-// console.log(restaurants)
-
-
-// for (var i = 0; i < restaurants.length; i++) {
-//     const newRest = restaurants[i].restaurant;
-
-//     let newRestName = newRest.name;
-//     let newRestImg = newRest.thumb;
-//     let newRestAddress = newRest.location.address;
-//     let newRestPhone = newRest.phone_numbers;
-//     let newRestRating = newRest.user_rating.aggregate_rating + " Stars";
-
-//     let divId = "#rest";
-//     let restDiv = document.querySelector(divId += i);
-
-//     let restName = restDiv.querySelector(".restName");
-//     restName.textContent = newRestName;
-
-//     let restImg = restDiv.querySelector(".restImg");
-//     restImg.src = newRestImg;
-//     if (newRestImg === "") {
-//         restImg.src = restPlacehold;
-//     }
-
-//     let restAddress = restDiv.querySelector(".restAddress");
-//     restAddress.textContent = newRestAddress;
-
-//     let restPhone = restDiv.querySelector(".restPhone");
-//     restPhone.textContent = newRestPhone;
-
-//     let restRating = restDiv.querySelector(".restRating");
-//     restRating.textContent = newRestRating;
-
-// }
 
 
 
