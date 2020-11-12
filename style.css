@@ -3,13 +3,45 @@ body{
   width: 100vw;
   background-color: #444444;
   color: cornflowerblue;
+  min-height: 100vh;
 }
+/* Nav Bar */
+nav{
+  text-align: center;
+  color: gold;
+  background-color: cyan;
+}
+.titlebar{
+  min-width: 20vw;
+  position: fixed;
+  bottom: 95%;
+  z-index: 1;
+}
+.mainNav{
+  font-size: 20px;
+  color: gold;
+  background-color: crimson;
+}
+.sideNav{
+  font-size: 15px;
+  background-color:rgb(143, 12, 38);
+  border-radius: 0 0 0 50%;
+  padding-top: 15px;
+}
+/* Title & Search Box */
 .vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
-    display: flex;
-    align-items: center;
-  }
+/*    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+/*   min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+  margin-top: 5em;
+  
+}
+/*  */
+.resultHeader{
+  text-align: center;
+  font-size: 30px;
+}
 .centerTxt{
   text-align: center;
 }
@@ -23,24 +55,23 @@ body{
   margin: 0;
 }
 .result{
-  
   padding: 10px;
-
 }
-.absol {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 200px;
-  height: 100px;
-  border: 3px solid #73AD21;
-}
-footer{
+article{
+  margin: auto;
   margin-top: 5vh;
-  height: 2vh;
-  width: 100vw;
-  background-color: #555555;
+  border-radius: 10px;
+  background-color: black;
+  color: gold;
+  box-shadow: gold 0px 10px ;
 }
+/* 
+.homePage{
+  display: none;
+}
+
+
+
 button{
   text-align: center;
 }
@@ -50,4 +81,20 @@ button{
 .recipeD{
   margin: 1vh;
   min-width: 250px;
+}
+/*.resultCont{
+  display: none;
+}
+/*
+
+
+
+footer{
+  margin-top: 5vh;
+  height: 2vh;
+  width: 100vw;
+  background-color: red;
+  float: right;
+  
+  
 }

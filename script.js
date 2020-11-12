@@ -184,3 +184,7 @@ $.ajax({
 //         getUvIndex(response);
 //     });
 // };
+
+
+
+//$("#homeSearch").on("click", function)
