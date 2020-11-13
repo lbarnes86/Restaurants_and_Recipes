@@ -31,12 +31,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
-          </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            </div>
         </div>
     </nav>
 
@@ -48,8 +48,10 @@
                 <p class="lead">An app for searching restaurants and recipes to cook at home</p>
                 <hr/>
                 <div class="d-flex justify-content-center justify-content-around">
-                    <input type="text" placeholder="Search restaurants...">
-                    <button id="homeSearch"> Search</button>
+                    <form action="">
+                        <input id="homeSearchInput" type="text" style="width: 250px" placeholder="(what type of food do you want?)">
+                        <button type="submit" id="homeSearch"> Search</button>
+                    </form>
                     <!--Restaurants for now then recipes.-->
                 </div>
             </div>
@@ -61,14 +63,14 @@
         <div class="resultHeader">Restaurants</div>
 
         <!--Restaurant 1-->
-        <article id="rest0" class="col-11  "> 
+        <article id="rest0" class="col-11  ">
             <div class="row noPad">
                 <!--Img column-->
-                <div class="col-lg-3 "> 
+                <div class="col-lg-3 ">
                     <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid restImg">
                 </div>
                 <!--Info column-->
-                <div class="col-lg-9 "> 
+                <div class="col-lg-9 ">
                     <h4 class="centerTxt restName">Restaurant Name</h4>
                     <div class="row justify-content-around ">
                         <h5 class="restAddress">Address</h5>
@@ -77,9 +79,8 @@
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
-                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
-                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium
+                            consequuntur maxime pariatur.
                         </p>
                     </div>
                     <div class="row">
@@ -91,36 +92,36 @@
             <!--Modal-->
             <div class="modal fade" id="restM0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title restName" id="exampleModalLongTitle">Restaurant Name</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title restName" id="exampleModalLongTitle">Restaurant Name</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
+                        </div>
+                        <div class="modal-body">
+                            <li>Hours: 9am - 10pm</li>
+                            <li>Average cost for 2: 40</li>
+                            <li>Cuisines: Italian, Pizza</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                      <li>Hours: 9am - 10pm</li>
-                      <li>Average cost for 2: 40</li>
-                      <li>Cuisines: Italian, Pizza</li>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
                 </div>
             </div>
         </article>
 
         <!--Restaurant 2-->
-        <article id="rest1" class="col-11  "> 
+        <article id="rest1" class="col-11  ">
             <div class="row noPad">
                 <!--Img column-->
-                <div class="col-lg-3 "> 
+                <div class="col-lg-3 ">
                     <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid restImg">
                 </div>
                 <!--Info column-->
-                <div class="col-lg-9 "> 
+                <div class="col-lg-9 ">
                     <h4 class="centerTxt restName">Restaurant</h4>
                     <div class="row justify-content-around ">
                         <h5 class="restAddress">Address</h5>
@@ -129,9 +130,8 @@
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
-                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
-                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium
+                            consequuntur maxime pariatur.
                         </p>
                     </div>
                     <div class="row">
@@ -143,36 +143,36 @@
             <!--Modal-->
             <div class="modal fade" id="rest1Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title mrestName" id="exampleModalLongTitle">Restaurant Name</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title mrestName" id="exampleModalLongTitle">Restaurant Name</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
+                        </div>
+                        <div class="modal-body">
+                            <li>Hours: 9am - 10pm</li>
+                            <li>Average cost for 2: 40</li>
+                            <li>Cuisines: Italian, Pizza</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                      <li>Hours: 9am - 10pm</li>
-                      <li>Average cost for 2: 40</li>
-                      <li>Cuisines: Italian, Pizza</li>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
                 </div>
             </div>
         </article>
 
         <!--Restaurant 3-->
-        <article id="rest2" class="col-11  "> 
+        <article id="rest2" class="col-11  ">
             <div class="row noPad">
                 <!--Img column-->
-                <div class="col-lg-3 "> 
+                <div class="col-lg-3 ">
                     <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid restImg">
                 </div>
                 <!--Info column-->
-                <div class="col-lg-9 "> 
+                <div class="col-lg-9 ">
                     <h4 class="centerTxt restName">Restaurant</h4>
                     <div class="row justify-content-around ">
                         <h5 class="restAddress">Address</h5>
@@ -181,9 +181,8 @@
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
-                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
-                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium
+                            consequuntur maxime pariatur.
                         </p>
                     </div>
                     <div class="row">
@@ -195,29 +194,29 @@
             <!--Modal-->
             <div class="modal fade" id="rest2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title mrestName" id="exampleModalLongTitle">Restaurant Name</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title mrestName" id="exampleModalLongTitle">Restaurant Name</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
+                        </div>
+                        <div class="modal-body">
+                            <li>Hours: 9am - 10pm</li>
+                            <li>Average cost for 2: 40</li>
+                            <li>Cuisines: Italian, Pizza</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                      <li>Hours: 9am - 10pm</li>
-                      <li>Average cost for 2: 40</li>
-                      <li>Cuisines: Italian, Pizza</li>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
                 </div>
             </div>
         </article>
 
-        
-        
+
+
 
         <!--Recipe results-->
         <h3 class="resultHeader">Recipes</h3>
@@ -266,9 +265,10 @@
                     </div>
                 </div>
             </div>
-  
-            
-        </div><!-- End of recipeRow -->
+
+
+        </div>
+        <!-- End of recipeRow -->
 
     </main>
     <footer></footer>
@@ -278,16 +278,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
-    
-    
-    
+
+
+
 
 
 
 </body>
 
 </html>
-
-
-
-
