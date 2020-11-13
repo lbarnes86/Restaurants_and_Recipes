@@ -66,38 +66,66 @@ function restaurantSearchAPI(search) {
             let newRestAddress = newRest.location.address;
             let newRestPhone = newRest.phone_numbers;
             let newRestRating = newRest.user_rating.aggregate_rating + " Stars";
-            let newRestUrl = newRest.url;
-
+            let newRestUrl = 'Website: ' + newRest.url;
+            
             let divId = "#rest";
             let restDiv = document.querySelector(divId += i);
 
-            //let modalId = "#restM";
-            //let restDiv = document.querySelector(divId += i);
-
+            let modalId = "#restModal";
+            let restModal = document.querySelector(modalId += i);
+            
             let restName = restDiv.querySelector(".restName");
-            let mrestName = restDiv.querySelector(".restName");
-
+            let modalRestName = restModal.querySelector(".restName");
             restName.textContent = newRestName;
-
+            modalRestName.textContent = newRestName;
+            
             let restImg = restDiv.querySelector(".restImg");
+            let modalRestImg = restModal.querySelector(".restImg");
+
             restImg.src = newRestImg;
+            modalRestImg.src = newRestImg;
             if (newRestImg === "") {
                 restImg.src = restPlacehold;
+                modalRestImg.src = restPlacehold;
             }
 
             let restAddress = restDiv.querySelector(".restAddress");
+            let modalRestAddress = restModal.querySelector(".restAddress");
             restAddress.textContent = newRestAddress;
+            modalRestAddress.textContent = newRestAddress;
 
+            
             let restPhone = restDiv.querySelector(".restPhone");
+            let modalRestPhone = restModal.querySelector(".restPhone");
             restPhone.textContent = newRestPhone;
+            modalRestPhone.textContent = newRestPhone;
 
+            let restRating = restDiv.querySelector(".restRating");
+            let modalRestRating = restModal.querySelector(".restRating");
+            restRating.textContent = newRestRating;
+            modalRestRating.textContent = newRestRating;
+
+            let restUrl = restDiv.querySelector(".restUrl");
+            let modalRestUrl = restModal.querySelector(".restUrl");
+            restUrl.textContent = newRestUrl;
+            modalRestUrl.textContent = newRestUrl;
+            
             //let restRating = restDiv.querySelector(".restRating");
             //restRating.textContent = newRestRating;
 
         }
     });
 };
-
+//$(".moreInfoButton").on("click", function(event) {
+//    console.log(event.target)
+//    let clickedI = (parseInt(event.target.parentElement.parentElement.parentElement.parentElement.id[4]))
+//    console.log(restaurants[clickedI])
+//
+//    let modalArray = (JSON.stringify(restaurants[clickedI]))
+//    console.log(modalArray.restaurants)
+//            
+//
+//})
 
 // recipeQuery = "https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Seafood";
 recipeApiKey = "9973533";
