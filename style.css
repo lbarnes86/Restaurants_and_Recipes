@@ -1,73 +1,85 @@
-body{
-  margin: 0;
-  width: 100vw;
-  background-color: #444444;
-  color: cornflowerblue;
-  min-height: 100vh;
-}
-/* Nav Bar */
-nav{
-  text-align: center;
-  color: gold;
-  background-color: cyan;
-}
-.titlebar{
-  min-width: 20vw;
-  position: fixed;
-  bottom: 95%;
-  z-index: 1;
-}
-.mainNav{
-  font-size: 20px;
-  color: gold;
-  background-color: crimson;
-}
-.sideNav{
-  font-size: 15px;
-  background-color:rgb(143, 12, 38);
-  border-radius: 0 0 0 50%;
-  padding-top: 15px;
-}
-/* Title & Search Box */
-.vertical-center {
-/*    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-/*   min-height: 100vh; /* These two lines are counted as one :-)       */
-  display: flex;
-  align-items: center;
-  margin-top: 5em;
-  
-}
-/*  */
-.resultHeader{
-  text-align: center;
-  font-size: 30px;
-}
-.centerTxt{
-  text-align: center;
-}
-.cardResult{
-  max-width: 50vw;
-  border: solid gold 2px;
-  overflow: hidden;
-  margin: 10px;
-}
-.cardResult2{
-  margin: 0;
-}
-.result{
-  padding: 10px;
-}
-article{
-  margin: auto;
-  margin-top: 5vh;
-  border-radius: 10px;
-  background-color: black;
-  color: gold;
-  box-shadow: gold 0px 10px ;
+body {
+    margin: 0;
+    width: 100vw;
+    background-color: #444444;
+    color: cornflowerblue;
+    min-height: 100vh;
 }
 
-.hideIt{
-  display: none;
+
+/* Nav Bar */
+
+
+/*home jumbotron */
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    margin-top: 5em;
+}
+
+
+/* headers */
+
+.resultHeader {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5vh;
+}
+
+.centerTxt {
+    text-align: center;
+}
+
+.cardResult {
+    max-width: 50vw;
+    border: solid gold 2px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.cardResult2 {
+    margin: 0;
+}
+
+.result {
+    padding: 10px;
+}
+
+article {
+    margin: auto;
+    margin-top: 5vh;
+    border-radius: 10px;
+    background-color: #666666;
+}
+
+.card {
+    background-color: rgb(121, 121, 121);
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-body {
+    padding-top: 5px;
+}
+
+.card h4 {
+    margin: 0px;
+}
+
+img {
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.modal-content {
+    background-color: midnightblue;
+    color: gold;
 }
 
 
@@ -98,3 +110,29 @@ footer{
   
   
 }
+
+/*
+Old Nav
+nav{
+  text-align: center;
+  color: gold;
+  background-color: cyan;
+}
+.titlebar{
+  min-width: 20vw;
+  position: fixed;
+  bottom: 95%;
+  z-index: 1;
+}
+.mainNav{
+  font-size: 20px;
+  color: gold;
+  background-color: crimson;
+}
+.sideNav{
+  font-size: 15px;
+  background-color:rgb(143, 12, 38);
+  border-radius: 0 0 0 50%;
+  padding-top: 15px;
+}
+*/

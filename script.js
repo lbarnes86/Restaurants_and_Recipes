@@ -71,7 +71,12 @@ function restaurantSearchAPI(search) {
             let divId = "#rest";
             let restDiv = document.querySelector(divId += i);
 
+            //let modalId = "#restM";
+            //let restDiv = document.querySelector(divId += i);
+
             let restName = restDiv.querySelector(".restName");
+            let mrestName = restDiv.querySelector(".restName");
+
             restName.textContent = newRestName;
 
             let restImg = restDiv.querySelector(".restImg");
