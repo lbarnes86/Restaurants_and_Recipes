@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
+    <title>Restaurants & Recipes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
@@ -31,12 +31,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
-          </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            </div>
         </div>
     </nav>
 
@@ -48,8 +48,10 @@
                 <p class="lead">An app for searching restaurants and recipes to cook at home</p>
                 <hr/>
                 <div class="d-flex justify-content-center justify-content-around">
-                    <input type="text" placeholder="Search restaurants...">
-                    <button id="homeSearch"> Search</button>
+                    <form action="">
+                        <input id="homeSearchInput" type="text" style="width: 250px" placeholder="(what type of food do you want?)">
+                        <button type="submit" id="homeSearch"> Search</button>
+                    </form>
                     <!--Restaurants for now then recipes.-->
                 </div>
             </div>
@@ -61,14 +63,14 @@
         <div class="resultHeader">Restaurants</div>
 
         <!--Restaurant 1-->
-        <article id="rest0" class="col-11  "> 
+        <article id="rest0" class="col-11  ">
             <div class="row noPad">
                 <!--Img column-->
-                <div class="col-lg-3 "> 
+                <div class="col-lg-3 ">
                     <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid restImg">
                 </div>
                 <!--Info column-->
-                <div class="col-lg-9 "> 
+                <div class="col-lg-9 ">
                     <h4 class="centerTxt restName">Restaurant Name</h4>
                     <div class="row justify-content-around ">
                         <h5 class="restAddress">Address</h5>
@@ -77,9 +79,8 @@
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
-                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
-                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium
+                            consequuntur maxime pariatur.
                         </p>
                     </div>
                     <div class="row">
@@ -116,14 +117,14 @@
         </article>
 
         <!--Restaurant 2-->
-        <article id="rest1" class="col-11  "> 
+        <article id="rest1" class="col-11  ">
             <div class="row noPad">
                 <!--Img column-->
                 <div class="col-lg-3 "> 
                     <img src="./tomacco.jpeg" alt="placeholder" class="img-fluid restImg">
                 </div>
                 <!--Info column-->
-                <div class="col-lg-9 "> 
+                <div class="col-lg-9 ">
                     <h4 class="centerTxt restName">Restaurant</h4>
                     <div class="row justify-content-around ">
                         <h5 class="restAddress">Address</h5>
@@ -132,9 +133,8 @@
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
-                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
-                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium
+                            consequuntur maxime pariatur.
                         </p>
                     </div>
                     <div class="row">
@@ -152,6 +152,16 @@
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
+                        </div>
+                        <div class="modal-body">
+                            <li>Hours: 9am - 10pm</li>
+                            <li>Average cost for 2: 40</li>
+                            <li>Cuisines: Italian, Pizza</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                     </div>
                     <div class="modal-body">
                         <img  src="" alt="dsjdhskd" class="img-fluid restImg">
@@ -172,14 +182,14 @@
         </article>
 
         <!--Restaurant 3-->
-        <article id="rest2" class="col-11  "> 
+        <article id="rest2" class="col-11  ">
             <div class="row noPad">
                 <!--Img column-->
-                <div class="col-lg-3 "> 
+                <div class="col-lg-3 ">
                     <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid restImg">
                 </div>
                 <!--Info column-->
-                <div class="col-lg-9 "> 
+                <div class="col-lg-9 ">
                     <h4 class="centerTxt restName">Restaurant</h4>
                     <div class="row justify-content-around ">
                         <h5 class="restAddress">Address</h5>
@@ -188,9 +198,8 @@
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
-                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
-                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium
+                            consequuntur maxime pariatur.
                         </p>
                     </div>
                     <div class="row">
@@ -208,6 +217,16 @@
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
+                        </div>
+                        <div class="modal-body">
+                            <li>Hours: 9am - 10pm</li>
+                            <li>Average cost for 2: 40</li>
+                            <li>Cuisines: Italian, Pizza</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                     </div>
                     <div class="modal-body">
                         <img  src="" alt="dsjdhskd" class="img-fluid restImg">
@@ -227,8 +246,8 @@
             </div>
         </article>
 
-        
-        
+
+
 
         <!--Recipe results-->
         <h3 class="resultHeader">Recipes</h3>
@@ -237,13 +256,14 @@
 
             <div id="recipe0" class="col-md-4">
                 <div class="card " style="width: 18rem;">
-                    <img class="card-img-top recipeimg" src="./maruchan.jpg" alt="Card image cap">
+                    <img class="card-img-top recipeImg" src="./maruchan.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title centerTxt recipeName">Recipe Name</h4>
                         <h6 class="card-text recipeCategory">Mexican</h6>
                         <h6 class="card-text">Seafood</h6>
                         <div class="row justify-content-around">
-                            <button class="btn btn-primary col-lg-5" type="submit">Try it out!</button>
+                            <button class="btn btn-primary col-lg-5" type="submit"> Recipe <span class="recipeLink"href=""></span></button>
+                            <button class="btn btn-primary col-lg-5" type="submit"> Video <span class="recipeVideo" href=""></span></button>
                         </div>
                     </div>
                 </div>
@@ -256,7 +276,8 @@
                         <h6 class="card-text recipeCategory">Mexican</h6>
                         <h6 class="card-text">Seafood</h6>
                         <div class="row justify-content-around">
-                            <button class="btn btn-primary col-lg-5" type="submit">Try it out!</button>
+                            <button class="btn btn-primary col-lg-5" type="submit"> Recipe <span class="recipeLink"href=""></span></button>
+                            <button class="btn btn-primary col-lg-5" type="submit"> Video <span class="recipeVideo" href=""></span></button>
                         </div>
                     </div>
                 </div>
@@ -269,14 +290,16 @@
                         <h6 class="card-text recipeCategory">Mexican</h6>
                         <h6 class="card-text">Seafood</h6>
                         <div class="row justify-content-around">
-                            <button class="btn btn-primary col-lg-5" type="submit">Try it out!</button>
+                            <button class="btn btn-primary col-lg-5" type="submit"> Recipe <span class="recipeLink"href=""></span></button>
+                            <button class="btn btn-primary col-lg-5" type="submit"> Video <span class="recipeVideo" href=""></span></button>
                         </div>
                     </div>
                 </div>
             </div>
-  
-            
-        </div><!-- End of recipeRow -->
+
+
+        </div>
+        <!-- End of recipeRow -->
 
     </main>
     <footer></footer>
@@ -286,16 +309,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
-    
-    
-    
+
+
+
 
 
 
 </body>
 
 </html>
-
-
-
-

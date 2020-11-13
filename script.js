@@ -4,15 +4,47 @@ let recipePlacehold = "Assets/Images/recipe_Placeholder.jpeg";
 var restaurants = [];
 var recipes = [];
 
+let userFoodSearch = document.querySelector("#homeSearch")
+let userFoodInput = document.querySelector("#homeSearchInput")
+
+userFoodSearch.addEventListener('click', (event) => {
+    event.preventDefault();
+    let foodSearchButton = event.target;
+    let userFood = "";
+
+
+    switch (foodSearchButton.id) {
+        case "homeSearch":
+            console.log('homeSearch was clicked');
+            userFood = userFoodInput.value.toUpperCase();
+            break;
+    }
+    switch (foodSearchButton.id) {
+        case "homeSearchInput":
+            console.log('homeSearchInput was clicked');
+            userFood = userFoodInput.value.toUpperCase();
+            break;
+    }
+
+    if (userFood == "") return;
+
+    restaurantSearchAPI(userFood);
+    recipeSearchAPI(userFood);
+
+});
+
 $("#homeSearch").on("click", function(event) {
     // Preventing the button from trying to submit the form
     event.preventDefault();
     $(".homePage").css("display", "none");
     $("#resultPage").css("display", "block");
+});
+
+function restaurantSearchAPI(search) {
 
     $.ajax({
         method: "GET",
-        url: "https://developers.zomato.com/api/v2.1/search?q=" + "Italian" + "&count=" + "3" + "&lat=" + "32.958345" + "&lon=" + "-96.738986" + "&sort=" + "rating",
+        url: "https://developers.zomato.com/api/v2.1/search?q=" + search + "&count=" + "3" + "&lat=" + "32.958345" + "&lon=" + "-96.738986" + "&sort=" + "rating",
         headers: {
             "user-key": "2af77d90c4f9ac3a6faf1019f8a457e6"
         },
@@ -20,15 +52,15 @@ $("#homeSearch").on("click", function(event) {
     }).then(function(data) {
         console.log(data);
         console.log(data.restaurants)
-        
+
         restaurants = data.restaurants;
         // restaurants += JSON.parse(data).restaurants;
         // console.log(restaurants)
-        
-        
+
+
         for (var i = 0; i < restaurants.length; i++) {
             const newRest = restaurants[i].restaurant;
-            
+
             let newRestName = newRest.name;
             let newRestImg = newRest.thumb;
             let newRestAddress = newRest.location.address;
@@ -80,10 +112,10 @@ $("#homeSearch").on("click", function(event) {
             
             //let restRating = restDiv.querySelector(".restRating");
             //restRating.textContent = newRestRating;
-            
+
         }
     });
-});
+};
 //$(".moreInfoButton").on("click", function(event) {
 //    console.log(event.target)
 //    let clickedI = (parseInt(event.target.parentElement.parentElement.parentElement.parentElement.id[4]))
@@ -95,68 +127,55 @@ $("#homeSearch").on("click", function(event) {
 //
 //})
 
-recipeQuery2 = "https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Seafood";
+// recipeQuery = "https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Seafood";
 recipeApiKey = "9973533";
 foodTypeSearch = "Mexican";
 
 let mealIds = [];
 let recipeArray = [];
 
-$.ajax({
-    method: "GET",
-    url: "https://www.themealdb.com/api/json/v2/9973533/filter.php?a=" + foodTypeSearch,
+function recipeSearchAPI(search2) {
+    $.ajax({
+        method: "GET",
+        url: "https://www.themealdb.com/api/json/v2/9973533/filter.php?a=" + search2,
 
-}).then(function(data2) {
-    console.log(data2);
-    console.log(data2.meals)
+    }).then(function(data2) {
+        console.log(data2);
+        console.log(data2.meals)
 
-    let mealsArray = data2.meals;
+        let mealsArray = data2.meals;
 
-    for (let i = 0; i < mealsArray.length; i++) {
-        const meal = mealsArray[i];
-        let newMealId = meal.idMeal;
-        mealIds.push(newMealId);
-    }
+        for (let i = 0; i < mealsArray.length; i++) {
+            const meal = mealsArray[i];
+            let newMealId = meal.idMeal;
+            mealIds.push(newMealId);
+        }
 
-    console.log(mealIds);
-    let recipeReturns = 0;
-    for (let j = 0; j < mealIds.length; j++) {
-        const recipeId = mealIds[j];
+        console.log(mealIds);
+        let recipeReturns = 0;
+        for (let j = 0; j < mealIds.length; j++) {
+            const recipeId = mealIds[j];
 
-        recipeApiKey = "9973533";
-        $.ajax({
-            method: "GET",
-            url: "https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=" + recipeId,
+            recipeApiKey = "9973533";
+            $.ajax({
+                method: "GET",
+                url: "https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=" + recipeId,
 
-        }).then(function(data3) {
-            console.log(data3);
-            recipeArray.push(data3);
-            recipeReturns++;
+            }).then(function(data3) {
+                console.log(data3);
+                recipeArray.push(data3);
+                recipeReturns++;
 
-            if (recipeReturns == mealIds.length) {
-                putMyRecipesOnThePage();
-            }
-        });
+                if (recipeReturns === mealIds.length) {
+                    putMyRecipesOnThePage();
+                }
+            });
 
-    };
-
-
-});
-    
-//    // "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
-//let edamamId = "c6579a60";
-//let edamamKey = "1c0e533d12ab90b9d4c8070b4ebfc462";
-//
-//$.ajax({
-//    method: "GET",
-//    url: "https://api.edamam.com/search?q=" + "mexican" + "&mealType=" + "Dinner" + "&dishType=" + "main-course" + "&app_id=" + edamamId + "&app_key=" + edamamKey + "&from=0&to=3"
-//    
-//}).then(function(data2) {
-//    console.log(data2);
-//
-//});
+        };
 
 
+    });
+};
 
 function putMyRecipesOnThePage() {
     console.log(recipeArray);
@@ -195,6 +214,19 @@ function putMyRecipesOnThePage() {
     };
 };
 
+
+//    // "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
+//let edamamId = "c6579a60";
+//let edamamKey = "1c0e533d12ab90b9d4c8070b4ebfc462";
+//
+//$.ajax({
+//    method: "GET",
+//    url: "https://api.edamam.com/search?q=" + "mexican" + "&mealType=" + "Dinner" + "&dishType=" + "main-course" + "&app_id=" + edamamId + "&app_key=" + edamamKey + "&from=0&to=3"
+//    
+//}).then(function(data2) {
+//    console.log(data2);
+//
+//});
 
 
 
@@ -406,18 +438,3 @@ function putMyRecipesOnThePage() {
 //         getUvIndex(response);
 //     });
 // };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
