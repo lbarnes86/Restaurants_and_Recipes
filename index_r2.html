@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants & Recipes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="container-fluid nav justify-content-around">
+        <div class="row titlebar justify-content-within">
+
+            <a class="col-3 nav-link sideNav" href="#" style="border-radius: 0 0 0 50%;">Link</a>
+            <a id="navTitle" class="col-6 nav-link active mainNav" href="#">5-star Homebrew</a>
+            <a class="col-3 nav-link sideNav" href="#" style="border-radius: 0 0 50% 0;">Link</a>
+        </div>
+
+    </nav>
+    <header class="container-fluid vertical-center homePage">
+        <!--The jumbotron and home page of the app-->
+        <div class="jumbotron jumbotron-fluid mx-auto" style="background-color: gold; border: crimson 3px solid;">
+            <div class="container ">
+                <h1 class="display-4 ">Restaurants & Recipes</h1>
+                <p class="lead">An app for searching restaurants and recipes to cook at home</p>
+                <hr/>
+                <div class="d-flex justify-content-center justify-content-around">
+                    <input type="text" placeholder="Search restaurants...">
+                    <button id="homeSearch"> Search</button>
+                    <!--Restaurants for now then recipes.-->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="resultPage" class="container resultCont" style="background-color: #555555; display: none;">
+
+        <div class="resultHeader" style="margin-top: 10vh;">Search results</div>
+
+        <article id="rest0" class="col-11  "> 
+            <div class="row noPad">
+                <!--Img column-->
+                <div class="col-lg-3 "> 
+                    <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="restImg img-fluid restImg">
+                </div>
+                <!--Info column-->
+                <div class="col-lg-9 "> 
+                    <h4 class="centerTxt restName">Rey's ToMacco Stand</h4>
+                    <div class="row justify-content-around ">
+                        <h5 class="restAddress">547 nw 12th street</h5>
+                        <h5 id="restHoursT">Mon-Wed 11am-2pm</h5>
+                        <h5 id="restRating">Rated: 5 out of 5</h5>
+                    </div>
+                    <hr/>
+                    <div id="restDescT" class="row">
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
+                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
+                        <button class="col-lg-6 " style="background-color: red;">directions</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="rest1" class="col-11  "> 
+            <div class="row noPad">
+                <!--Img column-->
+                <div class="col-lg-3 "> 
+                    <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="restImg img-fluid restImg">
+                </div>
+                <!--Info column-->
+                <div class="col-lg-9 "> 
+                    <h4 class="centerTxt restName">Rey's ToMacco Stand</h4>
+                    <div class="row justify-content-around ">
+                        <h5 class="restAddress">547 nw 12th street</h5>
+                        <h5 id="restHoursT">Mon-Wed 11am-2pm</h5>
+                        <h5 id="restRating">Rated: 5 out of 5</h5>
+                    </div>
+                    <hr/>
+                    <div id="restDescT" class="row">
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
+                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
+                        <button class="col-lg-6 " style="background-color: red;">directions</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        
+        
+    
+        <article class="col-11"> 
+            <div class="row noPad">
+                <!--Img column-->
+                <div class="col-lg-3 "> 
+                    <img src="./maruchan.jpg" alt="dsjdhskd" class="restImg img-fluid">
+                </div>
+                <!--Info column-->
+                <div class="col-lg-9 "> 
+                    <h4 class="restName centerTxt ">Rey's Taco Stand</h4>
+                    <div class="row justify-content-around ">
+                        <h5 class="restAddress"> 548 nw 12th street</h5>
+                        <h5 class="restPhone"> Phone: 222-464-8445</h5>
+                        <h5>Rated: 4 out of 5</h5>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
+                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <button class="col-lg-6" style="background-color: snow;"> call <span class="restPhone"></span></button>
+                        <button class="col-lg-6" style="background-color: red;">directions</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col-11"> 
+            <div class="row noPad">
+                <!--Img column-->
+                <div class="col-lg-3 "> 
+                    <img src="./maruchan.jpg" alt="dsjdhskd" class="restImg img-fluid noPad">
+                </div>
+                <!--Info column-->
+                <div class="col-lg-9 "> 
+                    <h4 class="restName centerTxt">Rey's Taco Stand</h4>
+                    <div class="row justify-content-around ">
+                        <h5 class="restAddress">548 nw 12th street</h5>
+                        <h5 class="restPhone">Phone: 222-464-8445</h5>
+                        <h5>Rated: 4 out of 5</h5>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
+                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <button class="col-lg-6" style="background-color: snow;">call (215-356-4555)<span class="restPhone"></span></button>
+                        <button class="col-lg-6" style="background-color: red;">directions</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+    
+        <br>
+        
+        <!--1st cardRow for Recipe results-->
+        <h3 style="text-align: center;">Recipes</h3>
+    <div class="row justify-content-around mx-auto">
+        <div class="col-md-4">
+                <div class="card " style="width: 18rem;">
+                    <div id="recipe0">
+                    <img id="recipeImg" class="recipeImage card-img-top" src="./maruchan.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="recipeName centerTxt"></h5>
+                    <p class="recipeCategory" style="text-align: center;">Recipe category</p>
+                    <div class="row justify-content-around">
+                        <button class="btn btn-primary align-self-start" style="background-color: red; border-color: red;" type="submit"> recipe <span class="recipeLink"href=""></span></button>
+                        <button class="btn btn-primary align-self-end" style="background-color: red; border-color: red;" type="submit"> video <span class="recipeVideo" href=""></span></button>
+                        
+                    </div>
+                </div>
+             </div> 
+            </div>
+        </div>
+        <div class="col-md-4">
+                <div class="card " style="width: 18rem;">
+                <img id="recipeImage" class="recipeImage card-img-top" src="./spam.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="recipeName centerTxt"></h5>
+                    <p class="recipeCategory" style="text-align: center;" >Recipe category</p>
+                    <div class="row justify-content-around">
+                        <button class="btn btn-primary align-self-start" style="background-color: red; border-color: red;" type="submit"> recipe <span class="recipeLink" href=""></span></button>
+                        <button class="btn btn-primary align-self-end" style="background-color: red; border-color: red;" type="submit"> video <span class="recipeVideo" href=""></span></button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+                <div class="card " style="width: 18rem;">
+                <img id="recipeImg" class="card-img-top" src="./maruchan.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 id="recipeName" class="card-title centerTxt"></h5>
+                    <p class="recipeCategory card-text" style="text-align: center;" >Recipe category</p>
+                    <div class="row justify-content-around">
+                        <button class="btn btn-primary align-self-start" style="background-color: red; border-color: red;" type="submit"> recipe <span class="recipeLink" href=""></span></button>
+                        <button class="btn btn-primary align-self-end" style="background-color: red; border-color: red;" type="submit"> video <span class="recipeVideo" href=""></span></button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+  
+    </div><!-- End of recipeRow -->
+
+</main>
+<footer></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
