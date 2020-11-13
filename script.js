@@ -36,7 +36,7 @@ $("#homeSearch").on("click", function(event) {
             let newRestRating = newRest.user_rating.aggregate_rating + " Stars";
             let newRestUrl = newRest.url;
             
-            let divId = "#rest";
+            let divId = ".rest";
             let restDiv = document.querySelector(divId += i);
             
             let restName = restDiv.querySelector(".restName");
@@ -138,7 +138,7 @@ function putMyRecipesOnThePage() {
         let newRecipeLink = newRecipe.strSource;
         let newRecipeVideo = newRecipe.strYoutube;
 
-        let divId = "#recipe";
+        let divId = ".recipe";
         let recipeDiv = document.querySelector(divId += r);
 
         let recipeName = recipeDiv.querySelector(".recipeName");
