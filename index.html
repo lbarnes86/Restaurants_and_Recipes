@@ -11,16 +11,35 @@
 </head>
 
 <body>
+    <!--                        Old nav bar/title
 
-    <nav class="container-fluid nav justify-content-around">
-        <div class="row titlebar justify-content-within">
+        <nav class="container-fluid nav justify-content-around">
+            <div class="row titlebar justify-content-within">
+                
+                <a class="col-3 nav-link sideNav" href="#" style="border-radius: 0 0 0 50%;">Link</a>
+                <a id="navTitle" class="col-6 nav-link active mainNav" href="#">5-star Homebrew</a>
+                <a class="col-3 nav-link sideNav" href="#" style="border-radius: 0 0 50% 0;">Link</a>
+            </div>
+            
+        </nav>
+    -->
 
-            <a class="col-3 nav-link sideNav" href="#" style="border-radius: 0 0 0 50%;">Link</a>
-            <a id="navTitle" class="col-6 nav-link active mainNav" href="#">5-star Homebrew</a>
-            <a class="col-3 nav-link sideNav" href="#" style="border-radius: 0 0 50% 0;">Link</a>
+    <!--                                    Nav Bar             -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand centerTxt" href="#">Restaurants & Recipes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+          </div>
         </div>
-
     </nav>
+
     <header class="container-fluid vertical-center homePage">
         <!--The jumbotron and home page of the app-->
         <div class="jumbotron jumbotron-fluid mx-auto" style="background-color: gold; border: crimson 3px solid;">
@@ -39,8 +58,9 @@
 
     <main id="resultPage" class="container resultCont" style="background-color: #555555; display: none;">
 
-        <div class="resultHeader" style="margin-top: 10vh;">Search results</div>
+        <div class="resultHeader">Restaurants</div>
 
+        <!--Restaurant 1-->
         <article id="rest0" class="col-11  "> 
             <div class="row noPad">
                 <!--Img column-->
@@ -49,11 +69,11 @@
                 </div>
                 <!--Info column-->
                 <div class="col-lg-9 "> 
-                    <h4 class="centerTxt restName">Rey's ToMacco Stand</h4>
+                    <h4 class="centerTxt restName">Restaurant Name</h4>
                     <div class="row justify-content-around ">
-                        <h5 class="restAddress">547 nw 12th street</h5>
-                        <h5 id="restHoursT">Mon-Wed 11am-2pm</h5>
-                        <h5 id="restRating">Rated: 5 out of 5</h5>
+                        <h5 class="restAddress">Address</h5>
+                        <h5 id="restHoursT">Hours</h5>
+                        <h5 id="restRating">Rating</h5>
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
@@ -64,12 +84,35 @@
                     </div>
                     <div class="row">
                         <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
-                        <button class="col-lg-6 " style="background-color: red;">directions</button>
+                        <button type="button" class="btn btn-primary col-lg-6" data-toggle="modal" data-target="#rest0Modal">More Info</button>
                     </div>
+                </div>
+            </div>
+            <!--Modal-->
+            <div class="modal fade" id="restM0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title restName" id="exampleModalLongTitle">Restaurant Name</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <li>Hours: 9am - 10pm</li>
+                      <li>Average cost for 2: 40</li>
+                      <li>Cuisines: Italian, Pizza</li>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
                 </div>
             </div>
         </article>
 
+        <!--Restaurant 2-->
         <article id="rest1" class="col-11  "> 
             <div class="row noPad">
                 <!--Img column-->
@@ -78,11 +121,11 @@
                 </div>
                 <!--Info column-->
                 <div class="col-lg-9 "> 
-                    <h4 class="centerTxt restName">Rey's ToMacco Stand</h4>
+                    <h4 class="centerTxt restName">Restaurant</h4>
                     <div class="row justify-content-around ">
-                        <h5 class="restAddress">547 nw 12th street</h5>
-                        <h5 id="restHoursT">Mon-Wed 11am-2pm</h5>
-                        <h5 id="restRating">Rated: 5 out of 5</h5>
+                        <h5 class="restAddress">Address</h5>
+                        <h5 id="restHoursT">Hours</h5>
+                        <h5 id="restRating">Rating</h5>
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
@@ -93,142 +136,129 @@
                     </div>
                     <div class="row">
                         <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
-                        <button class="col-lg-6 " style="background-color: red;">directions</button>
+                        <button type="button" class="btn btn-primary col-lg-6" data-toggle="modal" data-target="#rest1Modal">More Info</button>
                     </div>
+                </div>
+            </div>
+            <!--Modal-->
+            <div class="modal fade" id="rest1Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title mrestName" id="exampleModalLongTitle">Restaurant Name</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <li>Hours: 9am - 10pm</li>
+                      <li>Average cost for 2: 40</li>
+                      <li>Cuisines: Italian, Pizza</li>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
                 </div>
             </div>
         </article>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        <article class="col-11"> 
+        <!--Restaurant 3-->
+        <article id="rest2" class="col-11  "> 
             <div class="row noPad">
                 <!--Img column-->
                 <div class="col-lg-3 "> 
-                    <img src="./maruchan.jpg" alt="dsjdhskd" class="img-fluid">
+                    <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid restImg">
                 </div>
                 <!--Info column-->
                 <div class="col-lg-9 "> 
-                    <h4 class="centerTxt ">Rey's Taco Stand</h4>
+                    <h4 class="centerTxt restName">Restaurant</h4>
                     <div class="row justify-content-around ">
-                        <h5>548 nw 12th street</h5>
-                        <h5>Phone: 222-464-8445</h5>
-                        <h5>Rated: 4 out of 5</h5>
+                        <h5 class="restAddress">Address</h5>
+                        <h5 id="restHoursT">Hours</h5>
+                        <h5 id="restRating">Rating</h5>
                     </div>
                     <hr/>
-                    <div class="row">
+                    <div id="restDescT" class="row">
                         <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                             Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
                             Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
                         </p>
                     </div>
                     <div class="row">
-                        <button class="col-lg-6" style="background-color: snow;">call (215-356-4555)</button>
-                        <button class="col-lg-6" style="background-color: red;">directions</button>
+                        <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
+                        <button type="button" class="btn btn-primary col-lg-6" data-toggle="modal" data-target="#rest2Modal">More Info</button>
                     </div>
                 </div>
             </div>
-        </article>
-        <article class="col-11"> 
-            <div class="row noPad">
-                <!--Img column-->
-                <div class="col-lg-3 "> 
-                    <img src="./maruchan.jpg" alt="dsjdhskd" class="img-fluid noPad">
-                </div>
-                <!--Info column-->
-                <div class="col-lg-9 "> 
-                    <h4 class="centerTxt ">Rey's Taco Stand</h4>
-                    <div class="row justify-content-around ">
-                        <h5>548 nw 12th street</h5>
-                        <h5>Phone: 222-464-8445</h5>
-                        <h5>Rated: 4 out of 5</h5>
+            <!--Modal-->
+            <div class="modal fade" id="rest2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title mrestName" id="exampleModalLongTitle">Restaurant Name</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
                     </div>
-                    <hr/>
-                    <div class="row">
-                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Distinctio eum consectetur, error eos dolores voluptatem esse? Dignissimos, at! 
-                            Recusandae corporis porro alias distinctio ad deserunt reprehenderit, laudantium consequuntur maxime pariatur.
-                        </p>
+                    <div class="modal-body">
+                      <li>Hours: 9am - 10pm</li>
+                      <li>Average cost for 2: 40</li>
+                      <li>Cuisines: Italian, Pizza</li>
                     </div>
-                    <div class="row">
-                        <button class="col-lg-6" style="background-color: snow;">call (215-356-4555)</button>
-                        <button class="col-lg-6" style="background-color: red;">directions</button>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
+                  </div>
                 </div>
             </div>
         </article>
 
-        <!--1st cardRow for Recipe results-->
-        <h3 style="text-align: center;">Recipes</h3>
+        
+        
+
+        <!--Recipe results-->
+        <h3 class="resultHeader">Recipes</h3>
         </hr>
         <div class="row justify-content-around mx-auto  recipeRow">
-            <div class="col-md-4">
+
+            <div id="recipe0" class="col-md-4">
                 <div class="card " style="width: 18rem;">
-                    <img id="recipeImg" class="card-img-top" src="./maruchan.jpg" alt="Card image cap">
+                    <img class="card-img-top recipeimg" src="./maruchan.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 id="recipeName" class="card-title centerTxt">Card title</h5>
-                        <p id="recipeContent" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h4 class="card-title centerTxt recipeName">Recipe Name</h4>
+                        <h6 class="card-text recipeCategory">Mexican</h6>
+                        <h6 class="card-text">Seafood</h6>
                         <div class="row justify-content-around">
-                            <button id="recipeButton" class="btn btn-primary align-self-start" type="submit">Recipe</button>
-                            <button class="btn btn-primary align-self-center" type="submit">Button</button>
-                            <button class="btn btn-primary align-self-end" type="submit">Button</button>
+                            <button class="btn btn-primary col-lg-5" type="submit">Try it out!</button>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class=" col-md-4 ">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="./spam.jpg" alt="Card image cap">
+            <div id="recipe1" class="col-md-4">
+                <div class="card " style="width: 18rem;">
+                    <img class="card-img-top recipeImg" src="./maruchan.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title centerTxt">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h4 class="card-title centerTxt recipeName">Recipe Name</h4>
+                        <h6 class="card-text recipeCategory">Mexican</h6>
+                        <h6 class="card-text">Seafood</h6>
                         <div class="row justify-content-around">
-                            <button class="btn btn-primary" type="submit">Button</button>
-                            <button class="btn btn-primary" type="submit">Button</button>
-                            <button class="btn btn-primary" type="submit">Button</button>
+                            <button class="btn btn-primary col-lg-5" type="submit">Try it out!</button>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4">
+            <div id="recipe2" class="col-md-4">
                 <div class="card " style="width: 18rem;">
-                    <img class="card-img-top" src="./maruchan.jpg" alt="Card image cap">
+                    <img class="card-img-top recipeImg" src="./maruchan.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title centerTxt">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h4 class="card-title centerTxt recipeName">Recipe Name</h4>
+                        <h6 class="card-text recipeCategory">Mexican</h6>
+                        <h6 class="card-text">Seafood</h6>
                         <div class="row justify-content-around">
-                            <button class="btn btn-primary" type="submit">Button</button>
-                            <button class="btn btn-primary" type="submit">Button</button>
-                            <button class="btn btn-primary" type="submit">Button</button>
+                            <button class="btn btn-primary col-lg-5" type="submit">Try it out!</button>
                         </div>
                     </div>
                 </div>
