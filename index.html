@@ -72,8 +72,8 @@
                     <h4 class="centerTxt restName">Restaurant Name</h4>
                     <div class="row justify-content-around ">
                         <h5 class="restAddress">Address</h5>
-                        <h5 id="restHoursT">Hours</h5>
-                        <h5 id="restRating">Rating</h5>
+                        <h5 class="restHours">Hours</h5>
+                        <h5 class="restRating">Rating</h5>
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
@@ -84,24 +84,27 @@
                     </div>
                     <div class="row">
                         <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
-                        <button type="button" class="btn btn-primary col-lg-6" data-toggle="modal" data-target="#rest0Modal">More Info</button>
+                        <button  type="button" class="btn btn-primary col-lg-6 moreInfoButton" data-toggle="modal" data-target="#restModal0">More Info</button>
                     </div>
                 </div>
             </div>
             <!--Modal-->
-            <div class="modal fade" id="restM0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade" id="restModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title restName" id="exampleModalLongTitle">Restaurant Name</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+                        <h5 class="modal-title restName centerTxt" id="exampleModalLongTitle">Restaurant Name</h5>
+                        <hr/>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
-                      <li>Hours: 9am - 10pm</li>
-                      <li>Average cost for 2: 40</li>
-                      <li>Cuisines: Italian, Pizza</li>
+                        <img  src="" alt="dsjdhskd" class="img-fluid restImg">
+                        <li class="restAddress">Hours: 9am - 10pm</li>
+                        <li class="restPhone"></li>
+                        <li class="restRating">Cuisines: Italian, Pizza</li>
+                        <li class="restUrl">Website</li>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -117,15 +120,15 @@
             <div class="row noPad">
                 <!--Img column-->
                 <div class="col-lg-3 "> 
-                    <img id="restImg" src="./tomacco.jpeg" alt="dsjdhskd" class="img-fluid restImg">
+                    <img src="./tomacco.jpeg" alt="placeholder" class="img-fluid restImg">
                 </div>
                 <!--Info column-->
                 <div class="col-lg-9 "> 
                     <h4 class="centerTxt restName">Restaurant</h4>
                     <div class="row justify-content-around ">
                         <h5 class="restAddress">Address</h5>
-                        <h5 id="restHoursT">Hours</h5>
-                        <h5 id="restRating">Rating</h5>
+                        <h5 class="restHours">Hours</h5>
+                        <h5 class="restRating">Rating</h5>
                     </div>
                     <hr/>
                     <div id="restDescT" class="row">
@@ -136,24 +139,28 @@
                     </div>
                     <div class="row">
                         <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
-                        <button type="button" class="btn btn-primary col-lg-6" data-toggle="modal" data-target="#rest1Modal">More Info</button>
+                        <button type="button" class="btn btn-primary col-lg-6 moreInfoButton" data-toggle="modal" data-target="#restModal1">More Info</button>
                     </div>
                 </div>
             </div>
             <!--Modal-->
-            <div class="modal fade" id="rest1Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade moreInfoModal" id="restModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title mrestName" id="exampleModalLongTitle">Restaurant Name</h5>
+                      <h5 class="modal-title restName" id="exampleModalLongTitle">Restaurant Name</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                      <li>Hours: 9am - 10pm</li>
-                      <li>Average cost for 2: 40</li>
-                      <li>Cuisines: Italian, Pizza</li>
+                        <img  src="" alt="dsjdhskd" class="img-fluid restImg">
+                        <li class="restAddress">Hours: 9am - 10pm</li>
+                        <li class="restPhone"></li>
+                        <li class="restRating">Cuisines: Italian, Pizza</li>
+                        <li class="restUrl">Website</li>
+                      
+                      
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -188,24 +195,28 @@
                     </div>
                     <div class="row">
                         <button class="col-lg-6 " style="background-color: snow;">call <span class="restPhone"></span></button>
-                        <button type="button" class="btn btn-primary col-lg-6" data-toggle="modal" data-target="#rest2Modal">More Info</button>
+                        <button type="button" class="btn btn-primary col-lg-6 moreInfoButton" data-toggle="modal" data-target="#restModal2">More Info</button>
                     </div>
                 </div>
             </div>
             <!--Modal-->
-            <div class="modal fade" id="rest2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade moreInfoModal" id="restModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title mrestName" id="exampleModalLongTitle">Restaurant Name</h5>
+                      <h5 class="modal-title restName" id="exampleModalLongTitle">Restaurant Name</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                      <li>Hours: 9am - 10pm</li>
-                      <li>Average cost for 2: 40</li>
-                      <li>Cuisines: Italian, Pizza</li>
+                        <img  src="" alt="dsjdhskd" class="img-fluid restImg">
+                        <li class="restAddress">Hours: 9am - 10pm</li>
+                        <li class="restPhone"></li>
+                        <li class="restRating">Cuisines: Italian, Pizza</li>
+                        <li class="restUrl">Website</li>
+                      
+                      
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
