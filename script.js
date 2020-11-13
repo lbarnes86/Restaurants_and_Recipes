@@ -138,26 +138,26 @@ function putMyRecipesOnThePage() {
         let newRecipeLink = newRecipe.strSource;
         let newRecipeVideo = newRecipe.strYoutube;
 
-        let divId = ".recipe";
+        let divId = "#recipe";
         let recipeDiv = document.querySelector(divId += r);
 
-        let recipeName = recipeDiv.querySelector(".recipeName");
+        let recipeName = recipeDiv.querySelector("#recipeName");
         recipeName.textContent = newRecipeName;
 
-        let recipeImg = recipeDiv.querySelector(".recipeImg");
+        let recipeImg = recipeDiv.querySelector("#recipeImg");
         recipeImg.src = newRecipeImg;
         if (newRecipeImg === "") {
             recipeImg.src = recipePlacehold;
         }
 
-        let recipeCategory = recipeDiv.querySelector(".recipeCategory");
+        let recipeCategory = recipeDiv.querySelector("#recipeCategory");
         recipeCategory.textContent = newRecipeCategory;
 
-        let recipeLink = recipeDiv.querySelector(".recipeLink");
+        let recipeLink = recipeDiv.querySelector("#recipeLink");
         recipeLink.href = newRecipeLink;
 
 
-        let recipeVideo = recipeDiv.querySelector(".recipeVideo");
+        let recipeVideo = recipeDiv.querySelector("#recipeVideo");
         recipeVideo.href = newRecipeVideo;
     };
 };
