@@ -1,8 +1,8 @@
 # Restaurants & Recipes
 
-- Project Repository: https://github.com/lbarnes86/project1
+- Project Repository: https://github.com/jdhprogrammer/Restaurants_and_Recipes
 
-- Project Deployment: https://lbarnes86.github.io/project1/
+- Project Deployment: http://jdhprogrammer.com/Restaurants_and_Recipes/
 
 ### Group Project #1
 
