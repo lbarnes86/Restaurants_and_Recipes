@@ -2,7 +2,7 @@
 
 - Project Repository: https://github.com/jdhprogrammer/Restaurants_and_Recipes
 
-- Project Deployment: http://jdhprogrammer.com/Restaurants_and_Recipes/
+- Project Deployment: https://jdhprogrammer.com/Restaurants_and_Recipes/
 
 ### Group Project #1
 
