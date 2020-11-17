@@ -6,29 +6,92 @@ body {
     min-height: 100vh;
 }
 
-
-/* Nav Bar */
-
-
-/*home jumbotron */
-
-.vertical-center {
-    display: flex;
-    align-items: center;
-    margin-top: 5em;
+#homePage {
+    border: cornflowerblue 3px solid;
+    background-color: #F8F9FA;
+    padding: 3em;
+    margin: 4em;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
 
-/* headers */
+input:focus::placeholder {
+    color: transparent;
+}
+
+.navPad {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#navSearch {
+    visibility: hidden;
+    padding-right: 2em;
+}
+
+#navSearchInput {
+    visibility: hidden;
+}
+
+#navbarSupportedContent {
+    visibility: hidden;
+}
+
+#homeSearchInput,
+#navSearchInput {
+    width: 300px;
+    background: #fff;
+    display: inline-flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 44px;
+    margin: 0 auto;
+}
+
+#homeSearch,
+#navSearch {
+    background-image: -webkit-linear-gradient(top, fff, fff);
+    background-color: #fff;
+    border: 1px solid #dfe1e5;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+#homeSearch:hover,
+#navSearch:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-linear-gradient(top, #f8f9fa, #f8f9fa);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+#homeSearchInput:hover,
+#navSearchInput:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    border-color: rgba(223, 225, 229, 0);
+}
 
 .resultHeader {
     text-align: center;
     font-size: 40px;
     margin-top: 5vh;
-}
-
-.centerTxt {
-    text-align: center;
 }
 
 .cardResult {
@@ -75,6 +138,7 @@ img {
     margin: 0 auto;
     float: none;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .modal-content {
