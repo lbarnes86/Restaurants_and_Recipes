@@ -41,6 +41,8 @@ $(document).ready(function() {
         restaurantSearchAPI(userFood);
         recipeSearchAPI(userFood);
 
+        userFoodInput.value = "";
+
     });
 
     userFoodSearch.addEventListener('click', (event) => {
@@ -67,6 +69,8 @@ $(document).ready(function() {
         restaurantSearchAPI(userFood);
         recipeSearchAPI(userFood);
 
+        userFoodInput.value = "";
+
     });
 
     $("#homeSearch").on("click", function(event) {
@@ -78,10 +82,14 @@ $(document).ready(function() {
         $("#homePage").css("margin", "1em");
         $("#homePage img").attr("src", "Assets/Images/logos/R_and_R_long_text.png");
         $("#resultPage").css("display", "block");
-        $("#navSearch").css("visibility", "visible");
-        $("#navSearchInput").css("visibility", "visible");
-        $("#navbarSupportedContent").css("visibility", "visible")
+        // $(".navbar-toggler").css("display", "inline-block");
+        // $(".navbar-toggler").css("visibility", "hidden");
+        $("#navSearch").css("display", "inline-block");
+        $("#navSearchInput").css("display", "inline-block");
+        $(".navbar-nav").css("display", "inline-flex")
+            // $(".spacer").css("display", "inline-block")
     });
+
 
     function restaurantSearchAPI(search) {
 
@@ -107,7 +115,8 @@ $(document).ready(function() {
                 let newRestName = newRest.name;
                 let newRestImg = newRest.thumb;
                 let newRestAddress = newRest.location.address;
-                let newRestPhone = newRest.phone_numbers;
+                let phone = newRest.phone_numbers;
+                let newRestPhone = phone.slice(0, 14);
                 let newRestRating = newRest.user_rating.aggregate_rating + " Stars";
                 let newRestUrl = 'Website: ' + newRest.url;
 
@@ -141,6 +150,7 @@ $(document).ready(function() {
                 let restPhone = restDiv.querySelector(".restPhone");
                 let modalRestPhone = restModal.querySelector(".restPhone");
                 restPhone.textContent = newRestPhone;
+                restPhone.href = ` "tel:+${newRestPhone}" `
                 modalRestPhone.textContent = newRestPhone;
 
                 let restRating = restDiv.querySelector(".restRating");
@@ -181,6 +191,7 @@ $(document).ready(function() {
         $.ajax({
             method: "GET",
             url: "https://www.themealdb.com/api/json/v2/9973533/filter.php?a=" + search2,
+
 
         }).then(function(data2) {
             console.log(data2);
@@ -254,8 +265,12 @@ $(document).ready(function() {
 
             let recipeVideo = recipeDiv.querySelector(".recipeVideo");
             recipeVideo.href = newRecipeVideo;
+
+            // let recipeModalVideo = recipeDiv.querySelector(".recipeModalVideo");
+            // recipeModalVideo.setAttribute("src", newRecipeVideo);
         };
     };
+
 
 
 
@@ -293,6 +308,9 @@ $(document).ready(function() {
 
 
 });
+
+// 
+
 
 // document.querySelector('#find-me').addEventListener('click', geoFindMe);
 //     getCurLocation();

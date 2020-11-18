@@ -1,18 +1,37 @@
 body {
-    margin: 0;
-    width: 100vw;
-    background-color: #444444;
-    color: cornflowerblue;
-    min-height: 100vh;
+    width: 100%;
+    background-color: fff;
+    color: rgb(42, 42, 42);
 }
 
 #homePage {
-    border: cornflowerblue 3px solid;
+    border: #FFA692 3px solid;
     background-color: #F8F9FA;
     padding: 3em;
-    margin: 4em;
 }
 
+#resultPage {
+    background-color: white;
+    display: none;
+}
+
+.resultHeader {
+    font-family: 'Pacifico', cursive;
+}
+
+.navbar {
+    border: #8BE7FF 3px solid;
+}
+
+.navbar-light .navbar-toggler {
+    border: solid #FFA692;
+}
+
+.navbar-toggler-icon {
+    color: #8be7ff;
+}
+
+button:focus,
 input:focus,
 textarea:focus,
 select:focus {
@@ -28,19 +47,6 @@ input:focus::placeholder {
     padding-right: 10px;
 }
 
-#navSearch {
-    visibility: hidden;
-    padding-right: 2em;
-}
-
-#navSearchInput {
-    visibility: hidden;
-}
-
-#navbarSupportedContent {
-    visibility: hidden;
-}
-
 #homeSearchInput,
 #navSearchInput {
     width: 300px;
@@ -51,7 +57,6 @@ input:focus::placeholder {
     border-radius: 24px;
     z-index: 3;
     height: 44px;
-    margin: 0 auto;
 }
 
 #homeSearch,
@@ -88,10 +93,64 @@ input:focus::placeholder {
     border-color: rgba(223, 225, 229, 0);
 }
 
+.navbar-toggler {
+    display: none;
+}
+
+#navSearch {
+    display: none;
+    padding-right: 2em;
+}
+
+#navSearchInput {
+    display: none;
+}
+
+.navbar-nav {
+    display: none;
+}
+
+.spacer {
+    display: none;
+    margin-top: 40px;
+}
+
 .resultHeader {
     text-align: center;
     font-size: 40px;
     margin-top: 5vh;
+}
+
+.homeHr {
+    border: #8be7ff 1px solid;
+}
+
+.resultsHr {
+    border: gray 1px solid;
+}
+
+.moreInfoButton {
+    background-color: #8BE7FF;
+    border: none;
+    color: black;
+    margin: 2px;
+}
+
+.moreInfoButton:hover {
+    background-color: #FFA692;
+    color: black;
+}
+
+.callPhoneButton {
+    background-color: #FFA692;
+    border: none;
+    color: black;
+    margin: 2px;
+}
+
+.callPhoneButton:hover {
+    background-color: #8BE7FF;
+    color: black;
 }
 
 .cardResult {
@@ -113,11 +172,11 @@ article {
     margin: auto;
     margin-top: 5vh;
     border-radius: 10px;
-    background-color: #666666;
+    background-color: #F8F9FA;
 }
 
 .card {
-    background-color: rgb(121, 121, 121);
+    background-color: #F8F9FA;
     padding: 0;
     margin: 0 auto;
     float: none;
@@ -145,6 +204,16 @@ img {
     background-color: midnightblue;
     color: gold;
 }
+
+
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 560%;
+    height: 315px;
+    cursor: pointer;
+} */
 
 
 /*
