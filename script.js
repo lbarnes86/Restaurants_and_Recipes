@@ -15,6 +15,11 @@ $(document).ready(function() {
     let userFoodSearch = document.querySelector("#homeSearch")
     let userFoodInput = document.querySelector("#homeSearchInput")
 
+    let userFoodNavSearch = document.querySelector("#navSearch")
+    let userFoodNavInput = document.querySelector("#navSearchInput")
+
+
+
     let test = false;
 
     userFoodSearch.addEventListener('click', (event) => {
@@ -42,25 +47,26 @@ $(document).ready(function() {
         recipeSearchAPI(userFood);
 
         userFoodInput.value = "";
+        document.activeElement.blur();
 
     });
 
-    userFoodSearch.addEventListener('click', (event) => {
+    userFoodNavSearch.addEventListener('click', (event) => {
         event.preventDefault();
-        let foodSearchButton = event.target;
+        let foodSearchNavButton = event.target;
         let userFood = "";
         geoFindMe();
 
-        switch (foodSearchButton.id) {
+        switch (foodSearchNavButton.id) {
             case "navSearch":
                 console.log('navSearch was clicked');
-                userFood = userFoodInput.value.toUpperCase();
+                userFood = userFoodNavInput.value.toUpperCase();
                 break;
         }
-        switch (foodSearchButton.id) {
+        switch (foodSearchNavButton.id) {
             case "navSearchInput":
                 console.log('navSearchInput was clicked');
-                userFood = userFoodInput.value.toUpperCase();
+                userFood = userFoodNavInput.value.toUpperCase();
                 break;
         }
 
@@ -69,7 +75,8 @@ $(document).ready(function() {
         restaurantSearchAPI(userFood);
         recipeSearchAPI(userFood);
 
-        userFoodInput.value = "";
+        userFoodNavInput.value = "";
+        document.activeElement.blur();
 
     });
 
@@ -82,7 +89,7 @@ $(document).ready(function() {
         $("#homePage").css("margin", "1em");
         $("#homePage img").attr("src", "Assets/Images/logos/R_and_R_long_text.png");
         $("#resultPage").css("display", "block");
-        // $(".navbar-toggler").css("display", "inline-block");
+        $(".navbar-toggler").css("display", "inline-block");
         // $(".navbar-toggler").css("visibility", "hidden");
         $("#navSearch").css("display", "inline-block");
         $("#navSearchInput").css("display", "inline-block");
@@ -118,50 +125,50 @@ $(document).ready(function() {
                 let phone = newRest.phone_numbers;
                 let newRestPhone = phone.slice(0, 14);
                 let newRestRating = newRest.user_rating.aggregate_rating + " Stars";
-                let newRestUrl = 'Website: ' + newRest.url;
+                let newRestUrl = newRest.url;
 
                 let divId = "#rest";
                 let restDiv = document.querySelector(divId += i);
 
-                let modalId = "#restModal";
-                let restModal = document.querySelector(modalId += i);
+                // let modalId = "#restModal";
+                // let restModal = document.querySelector(modalId += i);
 
                 let restName = restDiv.querySelector(".restName");
-                let modalRestName = restModal.querySelector(".restName");
+                // let modalRestName = restModal.querySelector(".restName");
                 restName.textContent = newRestName;
-                modalRestName.textContent = newRestName;
+                // modalRestName.textContent = newRestName;
 
                 let restImg = restDiv.querySelector(".restImg");
-                let modalRestImg = restModal.querySelector(".restImg");
+                // let modalRestImg = restModal.querySelector(".restImg");
 
                 restImg.src = newRestImg;
-                modalRestImg.src = newRestImg;
+                // modalRestImg.src = newRestImg;
                 if (newRestImg === "") {
                     restImg.src = restPlacehold;
-                    modalRestImg.src = restPlacehold;
+                    // modalRestImg.src = restPlacehold;
                 }
 
                 let restAddress = restDiv.querySelector(".restAddress");
-                let modalRestAddress = restModal.querySelector(".restAddress");
+                // let modalRestAddress = restModal.querySelector(".restAddress");
                 restAddress.textContent = newRestAddress;
-                modalRestAddress.textContent = newRestAddress;
+                // modalRestAddress.textContent = newRestAddress;
 
 
                 let restPhone = restDiv.querySelector(".restPhone");
-                let modalRestPhone = restModal.querySelector(".restPhone");
-                restPhone.textContent = newRestPhone;
-                restPhone.href = ` "tel:+${newRestPhone}" `
-                modalRestPhone.textContent = newRestPhone;
+                // let modalRestPhone = restModal.querySelector(".restPhone");
+                restPhone.textContent = `call ${newRestPhone}`;
+                restPhone.href = `tel:${newRestPhone}`
+                    // modalRestPhone.textContent = newRestPhone;
 
                 let restRating = restDiv.querySelector(".restRating");
-                let modalRestRating = restModal.querySelector(".restRating");
+                // let modalRestRating = restModal.querySelector(".restRating");
                 restRating.textContent = newRestRating;
-                modalRestRating.textContent = newRestRating;
+                // modalRestRating.textContent = newRestRating;
 
                 let restUrl = restDiv.querySelector(".restUrl");
-                let modalRestUrl = restModal.querySelector(".restUrl");
-                restUrl.textContent = newRestUrl;
-                modalRestUrl.textContent = newRestUrl;
+                // let modalRestUrl = restModal.querySelector(".restUrl");
+                restUrl.href = newRestUrl;
+                // modalRestUrl.textContent = newRestUrl;
 
                 //let restRating = restDiv.querySelector(".restRating");
                 //restRating.textContent = newRestRating;
@@ -186,6 +193,7 @@ $(document).ready(function() {
 
     let mealIds = [];
     let recipeArray = [];
+    let mealsArray = [];
 
     function recipeSearchAPI(search2) {
         $.ajax({
@@ -197,7 +205,9 @@ $(document).ready(function() {
             console.log(data2);
             console.log(data2.meals)
 
-            let mealsArray = data2.meals;
+            mealsArray = data2.meals;
+            mealIds = [];
+            recipeArray = [];
 
             for (let i = 0; i < mealsArray.length; i++) {
                 const meal = mealsArray[i];

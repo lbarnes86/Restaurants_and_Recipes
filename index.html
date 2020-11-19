@@ -21,9 +21,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <form autocomplete="off" class="my-2 my-lg-0">
-            <input id="navSearchInput" class=" form-control mr-sm-2 text-center" type="text" placeholder="(what type of food do you want?)">
-            <button class="my-2 my-sm-0" type="submit" id="navSearch"> Search</button>
+        <form autocomplete="off" class="my-0 my-lg-0 mx-auto mx-sm">
+            <input id="navSearchInput" class=" form-control mr-sm-2 mr-md-2 mr-lg-2 text-center" type="text" placeholder="(what type of food do you want?)">
+            <button class="my-0 my-sm-0" type="submit" id="navSearch">Search</button>
         </form>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
@@ -31,10 +31,10 @@
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" id="restBtn" href="#rest0">Restaurants</a>
+                    <a class="nav-link" id="restBtn" href="#restHeader">Restaurants</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="recipeBtn" href="#recipe0">Recipes</a>
+                    <a class="nav-link" id="recipeBtn" href="#recipeHeader">Recipes</a>
                 </li>
             </ul>
         </div>
@@ -44,113 +44,87 @@
 
     <main id="resultPage" class="container">
 
-        <h1 class="resultHeader">Restaurants</h1>
+        <h1 id="restHeader" class="resultHeader">Restaurants</h1>
 
         <!--Restaurant 1-->
         <article id="rest0" class="row mx-auto">
             <div class="col-11 mx-auto p-3">
                 <div class="row">
                     <!--Img column-->
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 text-center">
                         <img id="restImg" src="" alt="Restaurant Information" class="img-fluid restImg">
                     </div>
                     <!--Info column-->
-                    <div class="col-lg-9">
-                        <h4 class="centerTxt restName"></h4>
-                        <div class="row justify-content-around ">
-                            <h5 class="restAddress"></h5>
-                            <h5 class="restHours"></h5>
-                            <h5 class="restRating"></h5>
-                        </div>
-                        <hr class="resultsHr" />
-                        <div id="restDescT" class="row">
-                            <p>
-                            </p>
-                        </div>
+                    <div class="col text-center">
                         <div class="row justify-content-around">
-                            <a href="" type="button" class="btn btn-primary col-lg-5 callPhoneButton">call <span class="restPhone"></span></a>
-                            <button type="button" class="btn btn-primary col-lg-5 moreInfoButton" data-toggle="modal" data-target="#restModal0">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Modal-->
-                <div class="modal fade" id="restModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title restName" id="exampleModalLongTitle"></h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="" alt="dsjdhskd" class="img-fluid restImg">
-                                <li class="restAddress"></li>
-                                <li class="restPhone"></li>
-                                <li class="restRating"></li>
-                                <li class="restUrl"></li>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <div class="col-10 col-lg-5 text-center">
+                                <h4 class="centerTxt restName"></h4>
 
+                                <h5 class="restAddress"></h5>
+                                <h5 class="restHours"></h5>
+                                <h5 class="restRating"></h5>
+                            </div>
+                            <!-- <div class="col-10 col-lg-5 text-center">
+                                <div id="restDescT" class="row text-center">
+                                    <p>
+                                    </p>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <hr class="resultsHr" />
+                                <div class="row justify-content-around">
+                                    <a href="" type="button" class="btn btn-primary col-lg-5 callPhoneButton restPhone"></a>
+                                    <a href="" type="button" class="btn btn-primary col-lg-5 moreInfoButton restUrl" target="_blank">Visit Website</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
             </div>
         </article>
 
         <!--Restaurant 2-->
         <article id="rest1" class="row mx-auto">
             <div class="col-11 mx-auto p-3">
-                <div class="row noPad">
+                <div class="row">
                     <!--Img column-->
-                    <div class="col-lg-3 ">
+                    <div class="col-lg-3 text-center">
                         <img id="restImg" src="" alt="Restaurant Information" class="img-fluid restImg">
                     </div>
                     <!--Info column-->
-                    <div class="col-lg-9 ">
-                        <h4 class="centerTxt restName"></h4>
+                    <div class="col text-center">
                         <div class="row justify-content-around">
-                            <h5 class="restAddress"></h5>
-                            <h5 class="restHours"></h5>
-                            <h5 class="restRating"></h5>
-                        </div>
-                        <hr class="resultsHr" />
-                        <div id="restDescT" class="row">
-                            <p>
-                            </p>
-                        </div>
-                        <div class="row justify-content-around">
-                            <a href="" type="button" class="btn btn-primary col-lg-5 callPhoneButton">call <span class="restPhone"></span></a>
-                            <button type="button" class="btn btn-primary col-lg-5 moreInfoButton" data-toggle="modal" data-target="#restModal0">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Modal-->
-                <div class="modal fade moreInfoModal" id="restModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title restName" id="exampleModalLongTitle"></h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="" alt="dsjdhskd" class="img-fluid restImg">
-                                <li class="restAddress"></li>
-                                <li class="restPhone"></li>
-                                <li class="restRating"></li>
-                                <li class="restUrl"></li>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <div class="col-10 col-lg-5 text-center">
+                                <h4 class="centerTxt restName"></h4>
 
+                                <h5 class="restAddress"></h5>
+                                <h5 class="restHours"></h5>
+                                <h5 class="restRating"></h5>
+                            </div>
+                            <!-- <div class="col-10 col-lg-5 text-center">
+                                <div id="restDescT" class="row text-center">
+                                    <p>
+                                    </p>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <hr class="resultsHr" />
+                                <div class="row justify-content-around">
+                                    <a href="" type="button" class="btn btn-primary col-lg-5 callPhoneButton restPhone"></a>
+                                    <a href="" type="button" class="btn btn-primary col-lg-5 moreInfoButton restUrl" target="_blank">Visit Website</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
             </div>
 
         </article>
@@ -158,62 +132,46 @@
         <!--Restaurant 3-->
         <article id="rest2" class="row mx-auto">
             <div class="col-11 mx-auto p-3">
-                <div class="row noPad">
+                <div class="row">
                     <!--Img column-->
-                    <div class="col-lg-3 ">
+                    <div class="col-lg-3 text-center">
                         <img id="restImg" src="" alt="Restaurant Information" class="img-fluid restImg">
                     </div>
                     <!--Info column-->
-                    <div class="col-lg-9 ">
-                        <h4 class="centerTxt restName"></h4>
-                        <div class="row justify-content-around ">
-                            <h5 class="restAddress"></h5>
-                            <h5 class="restHours"></h5>
-                            <h5 class="restRating"></h5>
-                        </div>
-                        <hr class="resultsHr" />
-                        <div id="restDescT" class="row">
-                            <p>
-                            </p>
-                        </div>
+                    <div class="col text-center">
                         <div class="row justify-content-around">
-                            <a href="" type="button" class="btn btn-primary col-lg-5 callPhoneButton">call <span class="restPhone"></span></a>
-                            <button type="button" class="btn btn-primary col-lg-5 moreInfoButton" data-toggle="modal" data-target="#restModal0">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Modal-->
-                <div class="modal fade moreInfoModal" id="restModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title restName" id="exampleModalLongTitle"></h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="" alt="dsjdhskd" class="img-fluid restImg">
-                                <li class="restAddress"></li>
-                                <li class="restPhone"></li>
-                                <li class="restRating"></li>
-                                <li class="restUrl"></li>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <div class="col-10 col-lg-5 text-center">
+                                <h4 class="centerTxt restName"></h4>
 
+                                <h5 class="restAddress"></h5>
+                                <h5 class="restHours"></h5>
+                                <h5 class="restRating"></h5>
+                            </div>
+                            <!-- <div class="col-10 col-lg-5 text-center">
+                                <div id="restDescT" class="row text-center">
+                                    <p>
+                                    </p>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <hr class="resultsHr" />
+                                <div class="row justify-content-around">
+                                    <a href="" type="button" class="btn btn-primary col-lg-5 callPhoneButton restPhone"></a>
+                                    <a href="" type="button" class="btn btn-primary col-lg-5 moreInfoButton restUrl" target="_blank">Visit Website</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            </div>
         </article>
 
-
-
-
         <!--Recipe results-->
-        <h3 class="resultHeader">Recipes</h3>
+        <h3 id="recipeHeader" class="resultHeader">Recipes</h3>
         </hr>
         <div class="row justify-content-around mx-auto mt-5 recipeRow">
 
@@ -221,7 +179,7 @@
                 <div class="card p-3" style="width: 18rem;">
                     <img class="card-img-top recipeImg" src="" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title centerTxt recipeName"></h4>
+                        <h5 class="card-title centerTxt recipeName"></h5>
                         <h6 class="card-text recipeCategory"></h6>
 
                         <div class="row justify-content-around">
@@ -235,7 +193,7 @@
                 <div class="card p-3" style="width: 18rem;">
                     <img class="card-img-top recipeImg" src="" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title centerTxt recipeName"></h4>
+                        <h5 class="card-title centerTxt recipeName"></h5>
                         <h6 class="card-text recipeCategory"></h6>
 
                         <div class="row justify-content-around">
@@ -249,7 +207,7 @@
                 <div class="card p-3" style="width: 18rem;">
                     <img class="card-img-top recipeImg" src="" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title centerTxt recipeName"></h4>
+                        <h5 class="card-title centerTxt recipeName"></h5>
                         <h6 class="card-text recipeCategory"></h6>
 
                         <div class="row justify-content-around">
@@ -274,7 +232,7 @@
                 <div class="d-flex justify-content-center">
                     <form autocomplete="off" action="">
                         <input id="homeSearchInput" class="text-center" type="text" placeholder="(what type of food do you want?)">
-                        <button type="submit" id="homeSearch"> Search</button>
+                        <button type="submit" id="homeSearch">Search</button>
                     </form>
                     <br>
                     <p id="status"></p>

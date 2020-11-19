@@ -31,7 +31,12 @@ body {
     color: #8be7ff;
 }
 
+a:focus,
+a:active,
+a:visited,
+button:active,
 button:focus,
+button:visited,
 input:focus,
 textarea:focus,
 select:focus {
@@ -93,10 +98,6 @@ input:focus::placeholder {
     border-color: rgba(223, 225, 229, 0);
 }
 
-.navbar-toggler {
-    display: none;
-}
-
 #navSearch {
     display: none;
     padding-right: 2em;
@@ -129,26 +130,30 @@ input:focus::placeholder {
     border: gray 1px solid;
 }
 
-.moreInfoButton {
+.moreInfoButton,
+.recipeLink {
     background-color: #8BE7FF;
     border: none;
     color: black;
     margin: 2px;
 }
 
-.moreInfoButton:hover {
+.moreInfoButton:hover,
+.recipeLink:hover {
     background-color: #FFA692;
     color: black;
 }
 
-.callPhoneButton {
+.callPhoneButton,
+.recipeVideo {
     background-color: #FFA692;
     border: none;
     color: black;
     margin: 2px;
 }
 
-.callPhoneButton:hover {
+.callPhoneButton:hover,
+.recipeVideo:hover {
     background-color: #8BE7FF;
     color: black;
 }
@@ -177,6 +182,7 @@ article {
 
 .card {
     background-color: #F8F9FA;
+    height: 475px;
     padding: 0;
     margin: 0 auto;
     float: none;
@@ -185,7 +191,7 @@ article {
 }
 
 .card-body {
-    padding-top: 5px;
+    padding: 5px;
 }
 
 .card h4 {
@@ -203,6 +209,45 @@ img {
 .modal-content {
     background-color: midnightblue;
     color: gold;
+}
+
+.navbar-toggler {
+    display: none;
+    visibility: hidden;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-toggler {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #homeSearchInput,
+    #navSearchInput {
+        margin-left: 10px;
+        margin-top: 0px;
+        width: 250px;
+        font-size: 12px;
+        height: 30px;
+    }
+    #homeSearch,
+    #navSearch {
+        font-size: 12px;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0 3px;
+        height: 28px;
+        /* min-width: 54px; */
+    }
+    #restBtn {
+        padding-bottom: 1px;
+    }
+    #recipeBtn {
+        padding: 0px
+    }
 }
 
 
