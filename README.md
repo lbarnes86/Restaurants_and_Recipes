@@ -2,7 +2,7 @@
 
 - Project Repository: https://github.com/lbarnes86/project1
 
-- Project Deployment: https://lbarnes86.github.io/project1/
+- Project Deployment: https://lbarnes86.github.io/Restaurants_and_Recipes/
 
 ### Group Project #1
 
