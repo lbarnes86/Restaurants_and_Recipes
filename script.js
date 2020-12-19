@@ -26,7 +26,7 @@ $(document).ready(function() {
         event.preventDefault();
         let foodSearchButton = event.target;
         let userFood = "";
-        geoFindMe();
+        // geoFindMe();
 
         switch (foodSearchButton.id) {
             case "homeSearch":
@@ -55,7 +55,7 @@ $(document).ready(function() {
         event.preventDefault();
         let foodSearchNavButton = event.target;
         let userFood = "";
-        geoFindMe();
+        // geoFindMe();
 
         switch (foodSearchNavButton.id) {
             case "navSearch":
@@ -84,7 +84,8 @@ $(document).ready(function() {
         // Preventing the button from trying to submit the form
         event.preventDefault();
         // $(".homePage").css("display", "none");
-        geoFindMe();
+        // geoFindMe();
+
         $("#homePage").css("padding", "1em");
         $("#homePage").css("margin", "1em");
         $("#homePage img").attr("src", "Assets/Images/logos/R_and_R_long_text.png");
@@ -283,41 +284,66 @@ $(document).ready(function() {
 
 
 
+    var id, target, options;
 
-    function geoFindMe() {
+    function success(pos) {
+        var crd = pos.coords;
 
-        const status = document.querySelector('#status');
-        // const mapLink = document.querySelector('#map-link');
+        latitude = crd.latitude;
+        longitude = crd.longitude;
 
-        // mapLink.href = '';
-        // mapLink.textContent = '';
-
-
-        function success(position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-
-            status.textContent = '';
-            // mapLink.href = `
-            // https: //www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-            // mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
-        };
-
-        function error() {
-            status.textContent = 'Unable to retrieve your location';
+        if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
+            console.log('Congratulations, you reached the target');
+            navigator.geolocation.clearWatch(id);
         }
+    }
 
-        if (!navigator.geolocation) {
-            status.textContent = 'Geolocation is not supported by your browser';
-        } else {
-            // status.textContent = 'Locating…';
-            navigator.geolocation.getCurrentPosition(success, error);
-        }
-        return latitude, longitude;
+    function error(err) {
+        console.warn('ERROR(' + err.code + '): ' + err.message);
+    }
+
+    target = {
+        latitude: 0,
+        longitude: 0
     };
+
+    options = {
+        enableHighAccuracy: false,
+        timeout: 5000,
+        maximumAge: 0
+    };
+
+    id = navigator.geolocation.watchPosition(success, error, options);
+
+    console.log(latitude, "&", longitude)
 
 
 });
+// const options = {
+//     enableHighAccuracy: true,
+//     timeout: 5000,
+//     maximumAge: 0
+// };
+
+// async function success(pos) {
+//     let crd = await pos.coords;
+
+//     latitude = crd.latitude;
+//     longitude = crd.longitude;
+
+//     console.log('Your current position is:');
+//     console.log(`Latitude : ${crd.latitude}`);
+//     console.log(`Longitude: ${crd.longitude}`);
+//     console.log(`More or less ${crd.accuracy} meters.`);
+// }
+
+// function error(err) {
+//     console.warn(`ERROR(${err.code}): ${err.message}`);
+// }
+
+// navigator.geolocation.watchPosition(success[, error[, options]])
+
+
 
 // 
 
