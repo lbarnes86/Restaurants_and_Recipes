@@ -1,25 +1,120 @@
 body {
-    margin: 0;
-    width: 100vw;
-    background-color: #444444;
-    color: cornflowerblue;
-    min-height: 100vh;
+    width: 100%;
+    background-color: fff;
+    color: rgb(42, 42, 42);
 }
 
-
-/* Nav Bar */
-
-
-/*home jumbotron */
-
-.vertical-center {
-    display: flex;
-    align-items: center;
-    margin-top: 5em;
+#homePage {
+    border: #FFA692 3px solid;
+    background-color: #F8F9FA;
+    padding: 3em;
 }
 
+#resultPage {
+    background-color: white;
+    display: none;
+}
 
-/* headers */
+.resultHeader {
+    font-family: 'Pacifico', cursive;
+}
+
+.navbar {
+    border: #8BE7FF 3px solid;
+}
+
+.navbar-light .navbar-toggler {
+    border: solid #FFA692;
+}
+
+.navbar-toggler-icon {
+    color: #8be7ff;
+}
+
+a:focus,
+a:active,
+a:visited,
+button:active,
+button:focus,
+button:visited,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.navPad {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#homeSearchInput,
+#navSearchInput {
+    width: 300px;
+    background: #fff;
+    display: inline-flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 44px;
+}
+
+#homeSearch,
+#navSearch {
+    background-image: -webkit-linear-gradient(top, fff, fff);
+    background-color: #fff;
+    border: 1px solid #dfe1e5;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+#homeSearch:hover,
+#navSearch:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-linear-gradient(top, #f8f9fa, #f8f9fa);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+#homeSearchInput:hover,
+#navSearchInput:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+#navSearch {
+    display: none;
+    padding-right: 2em;
+}
+
+#navSearchInput {
+    display: none;
+}
+
+.navbar-nav {
+    display: none;
+}
+
+.spacer {
+    display: none;
+    margin-top: 40px;
+}
 
 .resultHeader {
     text-align: center;
@@ -27,8 +122,40 @@ body {
     margin-top: 5vh;
 }
 
-.centerTxt {
-    text-align: center;
+.homeHr {
+    border: #8be7ff 1px solid;
+}
+
+.resultsHr {
+    border: gray 1px solid;
+}
+
+.moreInfoButton,
+.recipeLink {
+    background-color: #8BE7FF;
+    border: none;
+    color: black;
+    margin: 2px;
+}
+
+.moreInfoButton:hover,
+.recipeLink:hover {
+    background-color: #FFA692;
+    color: black;
+}
+
+.callPhoneButton,
+.recipeVideo {
+    background-color: #FFA692;
+    border: none;
+    color: black;
+    margin: 2px;
+}
+
+.callPhoneButton:hover,
+.recipeVideo:hover {
+    background-color: #8BE7FF;
+    color: black;
 }
 
 .cardResult {
@@ -50,11 +177,12 @@ article {
     margin: auto;
     margin-top: 5vh;
     border-radius: 10px;
-    background-color: #666666;
+    background-color: #F8F9FA;
 }
 
 .card {
-    background-color: rgb(121, 121, 121);
+    background-color: #F8F9FA;
+    height: 475px;
     padding: 0;
     margin: 0 auto;
     float: none;
@@ -63,7 +191,7 @@ article {
 }
 
 .card-body {
-    padding-top: 5px;
+    padding: 5px;
 }
 
 .card h4 {
@@ -75,12 +203,62 @@ img {
     margin: 0 auto;
     float: none;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .modal-content {
     background-color: midnightblue;
     color: gold;
 }
+
+.navbar-toggler {
+    display: none;
+    visibility: hidden;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-toggler {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #homeSearchInput,
+    #navSearchInput {
+        margin-left: 10px;
+        margin-top: 0px;
+        width: 250px;
+        font-size: 12px;
+        height: 30px;
+    }
+    #homeSearch,
+    #navSearch {
+        font-size: 12px;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0 3px;
+        height: 28px;
+        /* min-width: 54px; */
+    }
+    #restBtn {
+        padding-bottom: 1px;
+    }
+    #recipeBtn {
+        padding: 0px
+    }
+}
+
+
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 560%;
+    height: 315px;
+    cursor: pointer;
+} */
 
 
 /*

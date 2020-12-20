@@ -1,16 +1,17 @@
 # Restaurants & Recipes
 
-- Project Repository: https://github.com/lbarnes86/project1
+- Project Repository: https://github.com/jdhprogrammer/Restaurants_and_Recipes
 
-- Project Deployment: https://lbarnes86.github.io/project1/
+- Project Deployment: https://jdhprogrammer.com/Restaurants_and_Recipes/
 
-### Group Project #1
-
-Contributors: Lloyd Barnes, Rey Jimenez, David Harris
+### Project #1
+Author: David Harris
+Contributors: Lloyd Barnes, Rey Jimenez.
 
 ### Application Mission Statement
 
-- 
+- Develop and Application that Asks the user "what type of food would you like today?".
+- Then the Application Returns results for Local Restaurants and Online Recipes based on the User's input.
 
 #### First Day Plan / To-Do's
 ```
