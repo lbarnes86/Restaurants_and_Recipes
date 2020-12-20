@@ -5,8 +5,7 @@
 - Project Deployment: https://jdhprogrammer.com/Restaurants_and_Recipes/
 
 ### Project #1
-Author: David Harris
-Contributors: Lloyd Barnes, Rey Jimenez.
+David Harris, Lloyd Barnes, Rey Jimenez.
 
 ### Application Mission Statement
 
