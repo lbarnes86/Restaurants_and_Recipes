@@ -1,12 +1,11 @@
 # Restaurants & Recipes
 
-- Project Repository: https://github.com/jdhprogrammer/Restaurants_and_Recipes
+- Project Repository: https://github.com/lbarnes86/Restaurants_and_Recipes
 
-- Project Deployment: https://jdhprogrammer.com/Restaurants_and_Recipes/
+- Project Deployment: https://lbarnes86.github.io/Restaurants_and_Recipes/
 
 ### Project #1
-Author: David Harris
-Contributors: Lloyd Barnes, Rey Jimenez.
+Authors: David Harris, Lloyd Barnes, Rey Jimenez.
 
 ### Application Mission Statement
 
