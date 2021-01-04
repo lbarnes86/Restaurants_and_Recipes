@@ -1,82 +1,67 @@
 # Restaurants & Recipes
 
-- Project Repository: https://github.com/lbarnes86/Restaurants_and_Recipes
+- Project Repository: [Repository](https://github.com/lbarnes86/Restaurants_and_Recipes)
 
-- Project Deployment: https://lbarnes86.github.io/Restaurants_and_Recipes/
+- Project Deployment: [Project Deployment](https://lbarnes86.github.io/Restaurants_and_Recipes/)
 
-### Project #1
-Authors: David Harris, Lloyd Barnes, Rey Jimenez.
+## Table of Contents
 
-### Application Mission Statement
+- [Description](#description)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Screenshots](#screenshots)
+- [Contributors](#contributors)
+- [License](#license)
 
-- Develop and Application that Asks the user "what type of food would you like today?".
-- Then the Application Returns results for Local Restaurants and Online Recipes based on the User's input.
+## Description
 
-#### First Day Plan / To-Do's
-```
-Choose an Application Name
-- Restaurant Food at Home.
-- Dine In or Out.
-- Go Get It or Make It.
-- Restaurants & Recipes.
-```
-#### Desciption/Objectives:
+>The Restaurants & Recipes application allows a user to search the type of food they want and receive results for restaurants and recipes.
+
+## Usage
 
 ```
-user can search the type of food they want
-1. User gets results for restaurants.
+User gets results for restaurants.
     Get address and contact information for restaurant.
     User can look at the menu or search for items.
-    Possibly see photos of restaurant and food.
-  
-2. User gets results for recipes.
+    Can see photos of restaurant and food.
+User gets results for recipes.
     Get ingredients list.
-    Get Step by step.
-    possilby photos and reviews.
+    As well as photos and reviews and video link.
 ```
 
-### API's
-```
-#### Zomato 
-API-key: 2af77d90c4f9ac3a6faf1019f8a457e6
+## Dependencies
 
-<!-- #### Recipe Search and Diet - by Edamam
-- Application_id = c6579a60
-- API_key = 1c0e533d12ab90b9d4c8070b4ebfc462 -->
+- [JavaScript](https://www.javascript.com/) 
+- [jQuery](https://api.jquery.com/) 
+- [CSS](https://www.w3schools.com/css/css_intro.asp) 
+- [HTML](https://html.com/) 
 
-#### TheMealDB
+## Screenshots
 
-MealDB testKey = 1
-MealDB ApiKey = 9973533
-```
-## Layout
-```
-On app open there is a Title, logo, and Search Bar.
-search for type of food you want.
-______________________________
+<img src="https://user-images.githubusercontent.com/70309736/102709589-ccd23d00-4271-11eb-8a08-64c7d851de98.png">
 
-display top 3 results.
+<img src="https://user-images.githubusercontent.com/70309736/102709591-cd6ad380-4271-11eb-9ccf-f45f0e1729a3.png">
 
-for both restaurant & recipes.
-restaurant table.
-click restaurant get more details.
-recipe table.
-click recipe get more details.
-_________________________________
-```
-More information about Place or Recipe User clicks on.
+<img src="https://user-images.githubusercontent.com/70309736/102709594-ce9c0080-4271-11eb-8d88-0f67b0b7e666.png">
 
-## Tasks
+<img src="https://user-images.githubusercontent.com/70309736/102709601-d065c400-4271-11eb-9268-9e1e0762000f.png">
 
-HTML / CSS framework and beginning elements
+<img src="https://user-images.githubusercontent.com/70309736/102709604-d22f8780-4271-11eb-86ed-f7233da36d77.png">
 
-Javascript Load page, hide plash page, show results. event listeners. etc.
-
-API-integration. set up ajax query. work on manipulating the results data.
-
-### Screenshots
+<img src="https://user-images.githubusercontent.com/70309736/102709722-73b6d900-4272-11eb-9b00-949d861326c6.png">
 
 
+## Contributors
 
+[![GitHub license](https://img.shields.io/badge/Made%20by-Rey%20Jimenez-ab8c9b?style=flat&logo=github)](https://github.com/jrjimenez221)
 
+[![GitHub license](https://img.shields.io/badge/Made%20by-David%20Harris-ab8c9b?style=flat&logo=github)](https://github.com/jdhprogrammer)
+
+[![GitHub license](https://img.shields.io/badge/Made%20by-Lloyd%20Barnes-ab8c9b?style=flat&logo=github)](https://github.com/lbarnes86)
+
+## License
+
+none 
+
+Copyright© SMU BOOTCAMP 2020
 
