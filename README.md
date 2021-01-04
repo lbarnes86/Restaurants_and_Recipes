@@ -61,5 +61,7 @@ User gets results for recipes.
 
 ## License
 
+none 
+
 Copyright© SMU BOOTCAMP 2020
 
